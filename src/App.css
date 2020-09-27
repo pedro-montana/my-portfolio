@@ -2,28 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -52,7 +30,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 15px;
 }
 
 /* Track */
@@ -69,4 +47,115 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.nav-link {
+  text-align: left;
+}
+
+.add-appointment .card-body {
+  display: none;
+}
+
+.apt-addheading {
+  cursor: pointer;
+  user-select: none;
+}
+
+.appointment-list {
+  font-size: 1.1em;
+}
+
+.appointment-list .pet-item {
+  border-bottom: 1px dotted gray;
+}
+
+.appointment-list .pet-item:last-child {
+  border-bottom: none;
+}
+
+.appointment-list .pet-name {
+  font-weight: 600;
+  color: #337ab7;
+  font-size: 1.3em;
+  line-height: 100%;
+}
+
+.appointment-list .label-item {
+  font-weight: 600;
+  color: #667b82;
+}
+
+.appointment-list .apt-date {
+  font-style: italic;
+}
+
+.appointment-list .apt-notes {
+  line-height: 120%;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #a9aeb2;
+}
+
+.site-footer {
+  background: rgb(67, 67, 67);
+  background: linear-gradient(
+    to left,
+    rgba(67, 67, 67, 1) 0%,
+    rgba(179, 236, 255, 1) 60%
+  );
+}
+
+#button2:hover {
+  box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.24),
+    4px 4px 4px 4px rgba(255, 255, 255, 0.19);
+}
+
+@media only screen and (min-width: 600px) {
+  .carousel-caption {
+    top: 40%;
+    bottom: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .carousel-caption {
+    top: 30%;
+    bottom: auto;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+#error-page {
+  position: relative;
+  margin: 100px 0 100px 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+.card-bg {
+  background-color: #e0ecff;
+}
+@media only screen and (min-width: 770px) {
+  #profile-pic {
+    width: 18em;
+  }
+}
+@media only screen and (max-width: 770px) {
+  #profile-pic {
+    width: 12em;
+  }
+}
+
+#basic-nav-dropdown {
+  position:relative;
+  margin:auto;
 }

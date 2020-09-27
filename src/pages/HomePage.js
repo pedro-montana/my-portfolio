@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { BrowserView, MobileView } from "react-device-detect";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Toast from 'react-bootstrap/Toast';
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 
-import nyPic from "../img/pedro-NY_CITY_unsplash-3x2-6000x4000-bb-time-square-night-view.jpg";
-import officePic from "../img/pedro-random_sky_h4R3PbcX8qw_unsplash-1x1-1215x1215-office-building.jpg";
-import nightPic from "../img/pedro-geoffroy_hauwen_VjQDAWnIwBY_unsplash-1x1-1215x1215-night-view-city.jpg";
-import womanPic from "../img/pedro-enzo_silva_fH_3WEB6Yw_unsplash-1x1-1215-woman-in-brasil-town.jpg";
+import ControlledCarousel from "../components/ControlledCarousel";
+
+import officePic from "../img/pedro-office_building_detail_h4R3PbcX8qw_unsplash-16x9-767x431.jpg";
+import nightPic from "../img/pedro-geoffroy_hauwen_VjQDAWnIwBY_unsplash-16x9-767x431-night-view-city.jpg";
+import womanPic from "../img/pedro-enzo_silva_fH_3WEB6Yw_unsplash-16x9-767x431-woman-in-brasil-town.jpg";
 
 class HomePage extends Component {
   constructor(props) {
@@ -28,100 +28,59 @@ class HomePage extends Component {
   };
 
   render() {
-    //let whatIcon = this.state.icon ? <IoIosArrowForward /> : <IoIosArrowDown />;
     return (
       <>
-        <Jumbotron>
-          <BrowserView>
-            <img
-              className="mb-2"
-              src={nyPic}
-              //width="70%"
-              max-width="2160px"
-              alt="Time Square at night"
-            />
-          </BrowserView>
-          <MobileView>
-            <img
-              className="mb-2 img-fluid card-img-top"
-              src={nyPic}
-              width="100%"
-              max-width="2160px"
-              alt="Time Square at night"
-            />
-          </MobileView>
-          
-            <BrowserView>
-              <a href="#hp-heading">
-                <button
-                  type="button"
-                  className="btn btn-outline-light mt-5"
-                  onClick={this.handleClick}
-                >
-                  <h1 className="header">
-                    {this.state.isToggleOn ? (
-                      <IoIosArrowForward />
-                    ) : (
-                      <IoIosArrowDown />
-                    )}
-                    My Portfolio
-                  </h1>
-                </button>
-              </a>
-            </BrowserView>
-            <MobileView>
-              <a href="#hp-heading" className="">
-                <button type="button" className="btn btn-outline-light">
-                  <h1 className="my-bottom-text display-4 card-title font-weight-heavy m-3">
-                    My Portfolio
-                  </h1>
-                </button>
-              </a>
-            </MobileView>
-          
-        </Jumbotron>
-        <h2 id="hp-heading" className="font-weight-light m-3">
-          Hello, I'm Petr
-        </h2>
-        <div className="container-fluid">
+        <ControlledCarousel />
+
+        <Container id="hp-heading" className="p-5">
+          <h1 className="font-weight-light">Welcome</h1>
+        </Container>
+        <div className="container-fluid mb-5">
           <div className="row justify-content-md-center">
             <div className="col">
-              <Link to="/about">
-                <div className="card my-card m-3 mx-auto">
-                  <img src={officePic} className="card-img-top" alt="..." />
-                  <div className="card-body">
-                    <button type="button" className="btn btn-info">
-                      <h2 className="display-5 font-weight-light">About Me</h2>
-                    </button>
-                  </div>
+              <div className="card my-card m-3 mx-auto bg-light">
+                <img
+                  src={officePic}
+                  className="card-img-top"
+                  alt="Office building"
+                />
+                <div className="card-body">
+                  <h5 className="mb-3">A few words about myself.</h5>
+                  <Link to="/about">
+                    <Button variant="outline-success">About Me</Button>
+                  </Link>
                 </div>
-              </Link>
+              </div>
             </div>
             <div className="col">
-              <Link to="/showroom">
-                <div className="card my-card m-3 mx-auto">
-                  <img src={nightPic} className="card-img-top" alt="..." />
-                  <div className="card-body">
-                    <button type="button" className="btn btn-info">
-                      <h2 className="display-5 font-weight-light">Portfolio</h2>
-                    </button>
-                  </div>
+              <Card className="card my-card m-3 mx-auto bg-light">
+                <img
+                  src={nightPic}
+                  className="card-img-top"
+                  alt="City in night"
+                />
+                <div className="card-body">
+                  <h5 className="mb-3">Take a look at my work.</h5>
+                  <Link to="/showroom">
+                    <Button variant="outline-success">Portfolio</Button>
+                  </Link>
                 </div>
-              </Link>
+              </Card>
             </div>
             <div className="col">
-              <Link to="/contact">
-                <div className="card my-card m-3 mx-auto">
-                  <img src={womanPic} className="card-img-top" alt="..." />
-                  <div className="card-body">
-                    <button type="button" className="btn btn-info">
-                      <h2 className="display-5 font-weight-light">
-                        Contact Me
-                      </h2>
-                    </button>
-                  </div>
+              <div className="card my-card m-3 mx-auto bg-light">
+                <img
+                  src={womanPic}
+                  className="card-img-top"
+                  alt="Woman with building in the background"
+                />
+                <div className="card-body">
+                  <h5 className="mb-3">Get in touch.</h5>
+                  <Link to="/contact">
+                    <Button variant="outline-success">Contact Me</Button>
+                  </Link>
                 </div>
-              </Link>
+              </div>
             </div>
           </div>
         </div>

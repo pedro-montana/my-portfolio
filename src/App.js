@@ -5,6 +5,7 @@ import AboutPage from "./pages/AboutPage";
 import Showroom from "./pages/Showroom";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import NotFoundPage from "./pages/NotFoundPage";
 
 import Navigation from "./components/Navigation";
 import "./App.css";
@@ -17,10 +18,12 @@ function App() {
           <Navigation />
           <Switch>
             <Route path="/" component={HomePage} exact />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/showroom" component={Showroom} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/about" component={AboutPage} exact />
+            <Route path="/showroom" component={Showroom} exact />
+            <Route path="/contact" component={Contact} exact />
+            <Route component={NotFoundPage} />
           </Switch>
+
           <Footer />
         </div>
       </div>
