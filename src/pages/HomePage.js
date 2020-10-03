@@ -12,6 +12,7 @@ import ControlledCarousel from "../components/ControlledCarousel";
 import officePic from "../img/pedro-office_building_detail_h4R3PbcX8qw_unsplash-16x9-767x431.jpg";
 import nightPic from "../img/pedro-geoffroy_hauwen_VjQDAWnIwBY_unsplash-16x9-767x431-night-view-city.jpg";
 import womanPic from "../img/pedro-enzo_silva_fH_3WEB6Yw_unsplash-16x9-767x431-woman-in-brasil-town.jpg";
+import myPic from "../img/pedro-FB_IMG_1534027292493-16x9-767x431-profile-picture.jpg";
 
 class HomePage extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class HomePage extends Component {
             <div className="col">
               <div className="card my-card m-3 mx-auto bg-light">
                 <img
-                  src={officePic}
+                  src={myPic}
                   className="card-img-top"
                   alt="Office building"
                 />

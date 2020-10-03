@@ -1,6 +1,4 @@
 import React from "react";
-//import { Link } from "react-router-dom";
-import { BrowserView, MobileView } from "react-device-detect";
 
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";

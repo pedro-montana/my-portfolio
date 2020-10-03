@@ -19,9 +19,9 @@ function ComingSoonModal() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="mx-auto">Deutsche denn bald kommt!</Modal.Title>
+          <Modal.Title className="mx-auto">Kommt bald in deutscher Sprache.</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="mx-auto">Please choose on of the other languages. Thank you!</Modal.Body>
+        <Modal.Body className="mx-auto">Bitte kehren Sie zur englischen Version zurück.</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close

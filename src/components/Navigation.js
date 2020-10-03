@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsAward, BsCodeSlash } from "react-icons/bs";
 import { GiMushroomHouse } from "react-icons/gi";
 import { Link } from "react-router-dom";
@@ -11,7 +11,6 @@ import Button from "react-bootstrap/Button";
 
 import FlagCZ from "../img/flags/CZ.png";
 import FlagGB from "../img/flags/GB.png";
-import FlagDE from "../img/flags/DE.png";
 
 const useStateWithLocalStorage = (localStorageKey) => {
   const [value, setValue] = React.useState(
@@ -42,8 +41,53 @@ function Navigation() {
   const [value, setValue] = useStateWithLocalStorage("myLanguage");
   const [isGB, setGB] = useState(false);
   const [isCZ, setCZ] = useState(false);
-
   const [isDE, setDE] = useState(false);
+
+  const [isAbout, setAbout] = useState(false);
+  const [isShowroom, setShowroom] = useState(false);
+  const [isContact, setContact] = useState(false);
+  const [isBlog, setBlog] = useState(false);
+  const [isBlogAbout, setBlogAbout] = useState(false);
+  const [isArticle, setArticle] = useState(false);
+
+  if (localStorage.getItem("myLanguage") == null) {
+    localStorage.setItem("myLanguage", "cz");
+  }
+  const selectedPage = "text-warning";
+  const blogNavMargin = "";
+
+  setInterval(function () {
+    if (window.location.href.includes("/about")) {
+      setAbout(true);
+    } else {
+      setAbout(false);
+    }
+    if (window.location.href.includes("/showroom")) {
+      setShowroom(true);
+    } else {
+      setShowroom(false);
+    }
+    if (window.location.href.includes("/contact")) {
+      setContact(true);
+    } else {
+      setContact(false);
+    }
+    if (window.location.href.includes("/blog")) {
+      setBlog(true);
+    } else {
+      setBlog(false);
+    }
+    if (window.location.href.includes("/blog/blog-about")) {
+      setBlogAbout(true);
+    } else {
+      setBlogAbout(false);
+    }
+    if (window.location.href.includes("/blog/article")) {
+      setArticle(true);
+    } else {
+      setArticle(false);
+    }
+  }, 300);
 
   return (
     <Navbar
@@ -58,10 +102,17 @@ function Navigation() {
           id="button2"
           className="navbar-brand text-warning btn btn-outline-light"
           title="Home"
+          onClick={() => {
+            setExpanded(expanded ? false : "");
+            setAbout(false);
+            setShowroom(false);
+            setContact(false);
+          }}
         >
           <GiMushroomHouse className="mx-auto mb-1" size="25" />
           <span className="mobile-only">Home</span>
         </Link>
+        <span className={document.location.href.includes("/blog") || isBlog ? "mobile-only btn-lg" : "d-none"}>BLOG</span>
       </Navbar.Brand>
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
@@ -70,26 +121,95 @@ function Navigation() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto justify-content-end">
           <Link
-            className="nav-link text-white"
+            className={
+              `nav-link ` +
+              (document.location.href.includes("/about") || isAbout
+                ? `${selectedPage}`
+                : "text-white")
+            }
             to="/about"
-            onClick={() => setExpanded(false)}
+            onClick={() => {
+              setExpanded(false);
+            }}
           >
             About Me
           </Link>
           <Link
-            className="nav-link text-white"
+            className={
+              `nav-link ` +
+              (document.location.href.includes("/showroom") || isShowroom
+                ? `${selectedPage}`
+                : "text-white")
+            }
             to="/showroom"
-            onClick={() => setExpanded(false)}
+            onClick={() => {
+              setExpanded(false);
+            }}
           >
             My Work <BsCodeSlash className="mr-1" />
           </Link>
           <Link
-            className="nav-link text-white"
+            className={
+              `nav-link ` +
+              (document.location.href.includes("/contact") || isContact
+                ? `${selectedPage}`
+                : "text-white")
+            }
             to="/contact"
-            onClick={() => setExpanded(false)}
+            onClick={() => {
+              setExpanded(false);
+            }}
           >
             Contact
           </Link>
+
+          {/* BLOG CONTENT */}
+          <NavDropdown
+            title={<span className="text-warning">Blog</span>}
+            id="blog-nav"
+            className={
+              document.location.href.includes("/blog") || isBlog
+                ? `${selectedPage}`
+                : "d-none"
+            }
+            style={{ marginLeft: "auto", marginRight: "auto" }}
+          >
+            <NavDropdown.Item />
+            <NavDropdown.Item className={blogNavMargin}>
+              <Link
+                className="text-dark"
+                to="/blog"
+                onClick={() => {
+                  setExpanded(false);
+                }}
+              >
+                <Button variant="white" className="w-100">Home</Button>
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item className={blogNavMargin}>
+              <Link
+                className="text-dark"
+                to="/blog/blog-about"
+                onClick={() => {
+                  setExpanded(false);
+                }}
+              >
+                <Button variant="white" className="w-100">About</Button>
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item className={blogNavMargin}>
+              <Link
+                className="text-dark"
+                to="/blog/articles-list"
+                onClick={() => {
+                  setExpanded(false);
+                }}
+              >
+                <Button variant="white" className="w-100">Articles</Button>
+              </Link>
+            </NavDropdown.Item>
+          </NavDropdown>
+          {/* BLOG CONTENT */}
         </Nav>
         <Nav>
           <NavDropdown
@@ -102,7 +222,11 @@ function Navigation() {
               </>
             }
             id="basic-nav-dropdown"
-            style={width < 900 ? {} : { paddingLeft: "120px", right: "30px" }}
+            style={
+              width < 900
+                ? { marginLeft: "auto", marginRight: "auto" }
+                : { paddingLeft: "120px", right: "30px" }
+            }
           >
             <NavDropdown.Item
               onClick={() => {
@@ -133,10 +257,8 @@ function Navigation() {
               </>
             </NavDropdown.Item>
             <NavDropdown.Item>
-                {/* <img src={FlagDE} width="24" /> */}
-                <ComingSoonModal />
+              <ComingSoonModal />
             </NavDropdown.Item>
-
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>

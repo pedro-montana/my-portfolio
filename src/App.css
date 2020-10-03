@@ -50,8 +50,20 @@ html {
 }
 
 .nav-link {
-  text-align: left;
+  border-radius: 10px;
 }
+.nav-link:hover {
+  background: #6c9dc6;
+
+}
+
+@media only screen and (min-width: 990px) {
+  #blog-nav {
+    background: #6c9dc6;
+    border-radius: 10px;
+  }
+}
+
 
 .add-appointment .card-body {
   display: none;
@@ -135,7 +147,7 @@ h1 {
   margin: 100px 0 100px 0;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 990px) {
   .mobile-only {
     display: none;
   }

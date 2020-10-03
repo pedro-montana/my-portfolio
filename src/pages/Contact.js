@@ -11,67 +11,75 @@ import Container from "react-bootstrap/Container";
 import phoneBoothPic from "../img/pedro-phone_booth-3x1-2160x720-bb.jpg";
 import phoneBoothPicSmall from "../img/pedro-phone_booth-16x9-2160x1215-bb.jpg";
 
-const Contact = () => (
+function Contact() {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [height, setHeight] = React.useState(window.innerHeight);
+  const updateWidthAndHeight = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
+  React.useEffect(() => {
+    window.addEventListener("resize", updateWidthAndHeight);
+    return () => window.removeEventListener("resize", updateWidthAndHeight);
+  });
+  var smallPic;
+  if (width > 800) {
+    smallPic = phoneBoothPic;
+  } else {
+    smallPic = phoneBoothPicSmall;
+  }
+
+  return(
   <>
-    <BrowserView>
       <img
         className="d-block w-100"
-        src={phoneBoothPic}
+        src={smallPic}
         alt="First slide"
         fluid
       />
-    </BrowserView>
-    <MobileView>
-      <img
-        className="d-block w-100"
-        src={phoneBoothPicSmall}
-        alt="First slide"
-        fluid
-      />
-    </MobileView>
     <Container className="p-5">
       <h1 className="font-weight-light m-3">Contact</h1>
     </Container>
     <h4>Feel free to contact me:</h4>
     <CardColumns className="mt-5">
-      <Card className="py-5">
-        <h3 className="mt-3">Phone</h3>
-
-        <a
-          href="tel:00420739840847"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="Phone"
-        >
-          <FcPhoneAndroid size="40" className="mt-3" />
-        </a>
-      </Card>
-      <Card className="py-5">
-        <h3 className="mt-3">Email</h3>
-
-        <a
-          href="mailto:petrhoracek02@gmail.com"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="Email"
-        >
-          <SiMailDotRu size="40" className="mt-3 text-dark" />
-        </a>
-      </Card>
-      <Card className="py-5">
-        <h3 className="mt-3">LinkedIn</h3>
-
-        <a
-          href="https://www.linkedin.com/in/petr-hor%C3%A1%C4%8Dek-76904b1b7"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="LinkedIn"
-        >
-          <FiLinkedin size="40" className="mt-3 text-dark" />
-        </a>
-      </Card>
+      <a
+        href="tel:00420739840847"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Phone"
+        className="text-dark"
+      >
+        <Card className="py-5">
+          <h3 className="mt-3">Phone</h3>
+          <FcPhoneAndroid size="40" className="mt-3 mx-auto" />
+        </Card>
+      </a>
+      <a
+        href="mailto:petrhoracek02@gmail.com"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="Email"
+        className="text-dark"
+      >
+        <Card className="py-5">
+          <h3 className="mt-3">Email</h3>
+          <SiMailDotRu size="40" className="mt-3 text-dark mx-auto" />
+        </Card>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/petr-hor%C3%A1%C4%8Dek-76904b1b7"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="LinkedIn"
+        className="text-dark"
+      >
+        <Card className="py-5">
+          <h3 className="mt-3">LinkedIn</h3>
+          <FiLinkedin size="40" className="mt-3 text-dark mx-auto" />
+        </Card>
+      </a>
     </CardColumns>
   </>
-);
+)};
 
 export default Contact;
