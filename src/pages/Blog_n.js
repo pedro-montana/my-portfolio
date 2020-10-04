@@ -10,14 +10,7 @@ const HomePage = () => (
     <NavBlog />
     <h1>Hello, welcome to my blog!</h1>
     <p>Blog example.</p>
-    <div>
-      <Link to="/blog/blog-about" className="mx-2">
-        <Button variant={buttonVariant}>About Me</Button>
-      </Link>
-      <Link to="/blog/articles-list" className="mx-2">
-        <Button variant={buttonVariant}>My Articles</Button>
-      </Link>
-    </div>
+    
   </div>
 );
 

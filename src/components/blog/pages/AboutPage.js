@@ -16,6 +16,7 @@ const AboutPage = () => (
     </p>
     <p>Originally I am from foreign country but always wanted to get to know Prague since it is the most beautiful city in the world.
     </p>
+    <p>Stay tuned.</p>
   </div>
 );
 

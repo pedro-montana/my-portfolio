@@ -7,7 +7,8 @@ import NavBlog from "../components/NavBlog";
 const ArticlesListPage = () => (
   <div id="blog-body">
     <NavBlog />
-    <h1>Articles</h1>
+    <h1 className="text-secondary">Articles</h1>
+    <hr style={{textAlign: "left",marginLeft:"0",width:"50%",minWidth:"200px"}}/>
     <ArticlesList articles={articleContent} />
   </div>
 );
