@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FaTimes } from "react-icons/fa";
 import Moment from "react-moment";
+import ReactTooltip from "react-tooltip";
 
 class ListAppointments extends Component {
   render() {
@@ -12,8 +13,11 @@ class ListAppointments extends Component {
               <button
                 className="pet-delete btn btn-sm btn-danger"
                 onClick={() => this.props.deleteAppointment(item)}
+                data-tip="Delete Appointment"
+                data-place="top"
               >
                 <FaTimes />
+                <ReactTooltip effect="solid" arrowColor="transparent" />
               </button>
             </div>
 
@@ -30,15 +34,20 @@ class ListAppointments extends Component {
                       item.aptId
                     )
                   }
+                  data-tip="Edit Name"
+                data-place="top"
                 >
                   {item.petName}
+                <ReactTooltip effect="solid" arrowColor="transparent" />
                 </span>
-                <span className="apt-date ml-auto">
+                <span className="apt-date ml-auto" data-tip="Edit Date"
+                data-place="top">
                   <Moment
                     date={item.aptDate}
                     parse="YYYY-MM-dd hh:mm"
                     format="MMM-D h:mma"
                   />
+                <ReactTooltip effect="solid" arrowColor="transparent" />
                 </span>
               </div>
 

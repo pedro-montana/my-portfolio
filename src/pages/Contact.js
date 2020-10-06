@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserView, MobileView } from "react-device-detect";
 import { FcPhoneAndroid } from "react-icons/fc";
 import { SiMailDotRu } from "react-icons/si";
 import { FiLinkedin } from "react-icons/fi";
@@ -13,10 +12,8 @@ import phoneBoothPicSmall from "../img/pedro-phone_booth-16x9-2160x1215-bb.jpg";
 
 function Contact() {
   const [width, setWidth] = React.useState(window.innerWidth);
-  const [height, setHeight] = React.useState(window.innerHeight);
   const updateWidthAndHeight = () => {
     setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
   };
   React.useEffect(() => {
     window.addEventListener("resize", updateWidthAndHeight);

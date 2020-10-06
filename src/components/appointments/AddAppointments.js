@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import {FaPlus} from 'react-icons/fa';
 
+import ReactTooltip from "react-tooltip";
+
+
 class AddAppointments extends Component {
 
 constructor() {
@@ -54,8 +57,9 @@ handleChange(e) {
           'card textcenter mt-3 ' + (this.props.formDisplay ? '': 'add-appointment')
       }>
         <div className="apt-addheading card-header bg-primary text-white"
-        onClick={this.props.toggleForm}>
+        onClick={this.props.toggleForm} data-tip="Add Appointment" data-place="bottom">
           <FaPlus /> Add Appointment
+        <ReactTooltip effect="solid" arrowColor="transparent" />
         </div>
 
         <div className="card-body">

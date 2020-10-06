@@ -1,23 +1,33 @@
-import React, { state, useState, useRef, ref } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BrowserView, MobileView } from "react-device-detect";
 import AppointmentManager from "./AppointmentManager";
 
 import Card from "react-bootstrap/Card";
-import CardColumns from "react-bootstrap/CardColumns";
 import Button from "react-bootstrap/Button";
+import ReactTooltip from "react-tooltip";
 
 import projectPic from "../img/pedro-projects-3x1-2160x1215-projects-logo.jpg";
 import formPic from "../img/pedro-form_example-16x9-767x431-vet-appointments.jpg";
 import blogPic from "../img/pedro-my_blog-16x9-767x431-blog-screenshot.jpg";
 import projectPicSmall from "../img/pedro-projects-16x9-2160x720-projects-logo.jpg";
 
+const useStateWithLocalStorage = (localStorageKey) => {
+  const [value, setValue] = React.useState(
+    localStorage.getItem(localStorageKey) || ""
+  );
+
+  React.useEffect(() => {
+    localStorage.setItem(localStorageKey, value);
+  }, [value]);
+
+  return [value, setValue];
+};
+
 function Showroom() {
+  const [value, setValue] = useStateWithLocalStorage("myLanguage");
   const [width, setWidth] = React.useState(window.innerWidth);
-  const [height, setHeight] = React.useState(window.innerHeight);
   const updateWidthAndHeight = () => {
     setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
   };
   React.useEffect(() => {
     window.addEventListener("resize", updateWidthAndHeight);
@@ -45,6 +55,27 @@ function Showroom() {
     }, 100);
   };
 
+  if (value === "gb") {
+var vetAppointments = "Vet Appointments";
+var dog = "A dog is a man's best friend.";
+var setAppointment = "Set an Appointment";
+var blogExample = "Blog Example";
+var blogBody = "When you need to tell the World everything.";
+var visitBlog = "Visit My Blog";
+var bott = "In case of any questions feel free to ";
+var conMe = "Contact Me";
+  }
+  else {
+var vetAppointments = "Návstěva Veterináře";
+var dog = "Pes je nejlepší přítel člověka.";
+var setAppointment = "Domluvit schůzku";
+var blogExample = "Ukázka blogu";
+var blogBody = "Když musíte světu říci všechno.";
+var visitBlog = "Do mého blogu";
+var bott = "V případě jýkýchkoliv dotazů mě prosím ";
+var conMe = "kontaktujte";
+}
+
   return (
     <>
       <img className="d-block w-100" src={smallPic} alt="First slide" fluid />
@@ -55,8 +86,11 @@ function Showroom() {
             id="appointments"
             className="py-3 my-3"
             onClick={onClick}
+            data-tip="Showroom"
+            data-place="bottom"
           >
             Close Appointments
+        <ReactTooltip effect="solid" arrowColor="transparent" />
           </Button>
           <hr />
           <AppointmentManager />
@@ -68,30 +102,29 @@ function Showroom() {
             <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
               <Card.Img variant="top" src={formPic} />
               <Card.Body>
-                <Card.Title>Vet Appointments</Card.Title>
-                <Card.Text>A dog is a man's best friend.</Card.Text>
+      <Card.Title>{vetAppointments}</Card.Title>
+      <Card.Text>{dog}</Card.Text>
                 <Button variant="primary" onClick={onClick}>
-                  Set an Appointment
+                  {setAppointment}
                 </Button>
               </Card.Body>
             </Card>
             <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
               <Card.Img variant="top" src={blogPic} />
               <Card.Body>
-                <Card.Title>Blog Example</Card.Title>
+      <Card.Title>{blogExample}</Card.Title>
                 <Card.Text>
-                  When you need to tell the World everything.
+                  {blogBody}
                 </Card.Text>
                 <Link to="/blog">
-                <Button variant="primary">Visit My Blog</Button>
+      <Button variant="primary">{visitBlog}</Button>
                 </Link>
               </Card.Body>
             </Card>
             </div>
           </div>
           <div className="mx-auto mt-5 mb-3">
-            In case of any questions feel free to{" "}
-            <Link to="/contact">Contact Me</Link>
+      {bott}<Link to="/contact">{conMe}</Link>
           </div>
         </>
       )}

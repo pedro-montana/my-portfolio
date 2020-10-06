@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import Button from "react-bootstrap/Button";
+import ReactTooltip from "react-tooltip";
 
-const buttonVariant = "dark";
+const buttonVariant = "secondary";
 
 const NavBlog = () => (
   <>
@@ -18,7 +19,8 @@ const NavBlog = () => (
         <Button variant={buttonVariant}>Articles</Button>
       </Link>
       <Link to="/showroom" className="mx-2">
-        <Button variant="outline-dark">Exit</Button>
+        <Button variant="outline-dark" data-tip="Showroom" data-place="bottom">Exit</Button>
+        <ReactTooltip effect="solid" arrowColor="transparent" />
       </Link>
     </div>
     <hr/>

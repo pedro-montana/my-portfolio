@@ -1,10 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import NavBlog from "../components/blog/components/NavBlog";
 
-import Button from "react-bootstrap/Button";
-
-const buttonVariant = "secondary";
 const HomePage = () => (
   <div id="blog-body">
     <NavBlog />

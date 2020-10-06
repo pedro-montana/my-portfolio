@@ -30,6 +30,7 @@ const ArticlePage = ({ match }) => {
 <NavBlog />
     <h1>{article.title}</h1>
     <UpvotesSection articleName={name} upvotes={articleInfo.upvotes} setArticleInfo={setArticleInfo} />
+    <br/>
     {article.content.map((paragraph, key) => (
         <p key={key}>{paragraph}</p>
     ))}

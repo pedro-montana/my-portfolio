@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { BsAward, BsCodeSlash } from "react-icons/bs";
+import React, { useState } from "react";
+import { BsCodeSlash } from "react-icons/bs";
 import { GiMushroomHouse } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import ComingSoonModal from "./ComingSoonModal";
@@ -8,6 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
+import ReactTooltip from "react-tooltip";
 
 import FlagCZ from "../img/flags/CZ.png";
 import FlagGB from "../img/flags/GB.png";
@@ -52,6 +53,26 @@ function Navigation() {
 
   if (localStorage.getItem("myLanguage") == null) {
     localStorage.setItem("myLanguage", "cz");
+  }
+  if (value === "gb") {
+    var about = "About Me";
+    var home = "Home";
+    var homeTip = "Home";
+    var showroom = "My Work";
+    var showroomTip = "My Work";
+    var contact = "Contact";
+    var articles = "Articles";
+    var language = "Language";
+  }
+  else {
+    var about = "O mně";
+    var home = "Domů";
+    var homeTip = "Domů";
+    var showroom = "Mé Ukázky";
+    var showroomTip = "Mé Ukázky";
+    var contact = "Kontakt";
+    var articles = "Články";
+    var language = "Jazyk";
   }
   const selectedPage = "text-warning";
   const blogNavMargin = "";
@@ -101,19 +122,31 @@ function Navigation() {
           to="/"
           id="button2"
           className="navbar-brand text-warning btn btn-outline-light"
-          title="Home"
           onClick={() => {
             setExpanded(expanded ? false : "");
             setAbout(false);
             setShowroom(false);
             setContact(false);
           }}
+          data-tip={homeTip}
+          data-place="bottom"
         >
           <GiMushroomHouse className="mx-auto mb-1" size="25" />
-          <span className="mobile-only">Home</span>
+        <span className="mobile-only">{home}</span>
         </Link>
-        <span className={document.location.href.includes("/blog") || isBlog ? "mobile-only btn-lg" : "d-none"}>BLOG</span>
+        <ReactTooltip effect="solid" arrowColor="transparent" />
+
+        <span
+          className={
+            document.location.href.includes("/blog") || isBlog
+              ? "mobile-only btn-lg"
+              : "d-none"
+          }
+        >
+          BLOG
+        </span>
       </Navbar.Brand>
+
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
         onClick={() => setExpanded(expanded ? false : "expanded")}
@@ -131,8 +164,10 @@ function Navigation() {
             onClick={() => {
               setExpanded(false);
             }}
+            data-tip={about}
           >
-            About Me
+            {about}
+            <ReactTooltip effect="solid" arrowColor="transparent" />
           </Link>
           <Link
             className={
@@ -145,8 +180,10 @@ function Navigation() {
             onClick={() => {
               setExpanded(false);
             }}
+            data-tip={showroomTip}
           >
-            My Work <BsCodeSlash className="mr-1" />
+            {showroom} <BsCodeSlash className="mr-1" />
+            <ReactTooltip effect="solid" arrowColor="transparent" />
           </Link>
           <Link
             className={
@@ -159,8 +196,10 @@ function Navigation() {
             onClick={() => {
               setExpanded(false);
             }}
+            data-tip={contact}
           >
-            Contact
+            {contact}
+            <ReactTooltip effect="solid" arrowColor="transparent" />
           </Link>
 
           {/* BLOG CONTENT */}
@@ -173,7 +212,9 @@ function Navigation() {
                 : "d-none"
             }
             style={{ marginLeft: "auto", marginRight: "auto" }}
+            data-tip="Blog"
           >
+            <ReactTooltip effect="solid" arrowColor="transparent" />
             <NavDropdown.Item />
             <NavDropdown.Item className={blogNavMargin}>
               <Link
@@ -183,7 +224,9 @@ function Navigation() {
                   setExpanded(false);
                 }}
               >
-                <Button variant="white" className="w-100">Home</Button>
+                <Button variant="white" className="w-100">
+                  {home}
+                </Button>
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Item className={blogNavMargin}>
@@ -194,7 +237,9 @@ function Navigation() {
                   setExpanded(false);
                 }}
               >
-                <Button variant="white" className="w-100">About</Button>
+                <Button variant="white" className="w-100">
+                  {about}
+                </Button>
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Item className={blogNavMargin}>
@@ -205,7 +250,9 @@ function Navigation() {
                   setExpanded(false);
                 }}
               >
-                <Button variant="white" className="w-100">Articles</Button>
+                <Button variant="white" className="w-100">
+                  {articles}
+                </Button>
               </Link>
             </NavDropdown.Item>
           </NavDropdown>
@@ -216,9 +263,12 @@ function Navigation() {
             title={
               <>
                 <img
-                  src={value == "cz" ? FlagCZ : value == "gb" ? FlagGB : FlagCZ}
+                  src={value === "cz" ? FlagCZ : value === "gb" ? FlagGB : FlagCZ}
                   width="24"
+                  alt="Language"
+                  data-tip={language}
                 />
+                <ReactTooltip effect="solid" arrowColor="transparent" />
               </>
             }
             id="basic-nav-dropdown"
@@ -236,10 +286,10 @@ function Navigation() {
                 localStorage.setItem("myLanguage", "cz");
                 window.location.reload();
               }}
-              className={value == "cz" ? "d-none" : ""}
+              className={value === "cz" ? "d-none" : ""}
             >
               <>
-                <img src={FlagCZ} width="24" /> Čeština
+                <img src={FlagCZ} width="24" alt="Čeština" /> Čeština
               </>
             </NavDropdown.Item>
             <NavDropdown.Item
@@ -250,10 +300,10 @@ function Navigation() {
                 localStorage.setItem("myLanguage", "gb");
                 window.location.reload();
               }}
-              className={value == "gb" ? "d-none" : ""}
+              className={value === "gb" ? "d-none" : ""}
             >
               <>
-                <img src={FlagGB} width="24" /> English
+                <img src={FlagGB} width="24" alt="English" /> English
               </>
             </NavDropdown.Item>
             <NavDropdown.Item>

@@ -14,7 +14,7 @@ function ComingSoonModal() {
   return (
     <>
       <div onClick={handleShow}>
-        <img src={FlagDE} width="24" /> Deutsch
+        <img src={FlagDE} width="24" alt="Deutsch" /> Deutsch
       </div>
 
       <Modal show={show} onHide={handleClose}>

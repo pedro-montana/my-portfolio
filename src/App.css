@@ -54,9 +54,7 @@ html {
 }
 .nav-link:hover {
   background: #6c9dc6;
-
 }
-
 
 @media only screen and (min-width: 990px) {
   #blog-nav {
@@ -64,7 +62,6 @@ html {
     border-radius: 10px;
   }
 }
-
 
 .add-appointment .card-body {
   display: none;
@@ -169,6 +166,28 @@ h1 {
 }
 
 #basic-nav-dropdown {
-  position:relative;
-  margin:auto;
+  position: relative;
+  margin: auto;
+}
+@media only screen and (max-width: 990px) {
+  .__react_component_tooltip {
+    display: none;
+  }
+}
+.__react_component_tooltip {
+
+  border-radius: 7px;
+  z-index: 999;
+  
+}
+
+.__react_component_tooltip.show {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", sans-serif;
+  padding: 8px 12px;
+  font-weight: 100;
+  font-size: 0.85rem;
+  letter-spacing: normal;
+  font-style: normal;
 }
