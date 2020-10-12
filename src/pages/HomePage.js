@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import ToHeadingButton from "../components/ToHeadingButton";
 
 import ControlledCarousel from "../components/ControlledCarousel";
 
 import nightPic from "../img/pedro-geoffroy_hauwen_VjQDAWnIwBY_unsplash-16x9-767x431-night-view-city.jpg";
 import womanPic from "../img/pedro-enzo_silva_fH_3WEB6Yw_unsplash-16x9-767x431-woman-in-brasil-town.jpg";
 import myPic from "../img/pedro-FB_IMG_1534027292493-16x9-767x431-profile-picture.jpg";
-import { getByAltText } from "@testing-library/react";
 
 const useStateWithLocalStorage = (localStorageKey) => {
   const [value, setValue] = React.useState(
@@ -33,6 +33,7 @@ function HomePage() {
   var aboutIntro = "A few words about myself.";
   var showIntro = "Take a look at my work.";
   var contIntro = "Get in touch.";
+  var intro = "Zde chci ukázat svoje dynamicky se prohlubující znalosti v ReactJS.<br />V ukázkách práce je jednoduchý blog, organizátor schůzek a video list z API..."
 
   if (value === "gb") {
     welcome = "Welcome";
@@ -42,21 +43,31 @@ function HomePage() {
     aboutIntro = "A few words about myself.";
     showIntro = "Take a look at my work.";
     contIntro = "Get in touch.";
+    intro = "Here I want to prove my dynamically deepening knowledge of ReactJS.<br />In portfolio is to be seen a simple blog, appointment manager and video list from an API..."
   } else {
     welcome = "Vítejte";
     aboutBtn = "O mně";
     portBtn = "Moje portfolio";
-    contBtn = "Kontaktuje mě";
+    contBtn = "Kontaktujte mě";
     aboutIntro = "Pár slov o mně.";
     showIntro = "Prozkoumejte moji práci.";
-    contIntro = "Zůstat ve spojení.";
-  }
+    contIntro = "Zůstaňme ve spojení.";
+    intro = "Zde chci ukázat svoje dynamicky se prohlubující znalosti v ReactJS.<br />V mém portfoliu je jednoduchý blog, organizátor schůzek a video list z API..."
+}
+  React.useEffect(() => {
+    if (value === "gb") {
+    document.title="My Portfolio";}
+    else
+    document.title="My Portfolio";
+    })
   return (
     <>
       <ControlledCarousel />
 
-      <Container id="hp-heading" className="p-5">
+      <Container id="hp-heading" className="pl-5 pb-5 pr-5 mt-5">
+        <ToHeadingButton headingHash="hp-heading" topOffset="-130px" />
         <h1 className="font-weight-light">{welcome}</h1>
+  <p className="py-5" dangerouslySetInnerHTML={{__html: intro}}></p>
       </Container>
       <div className="container-fluid mb-5">
         <div className="row justify-content-md-center">

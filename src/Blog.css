@@ -1,24 +1,50 @@
 #blog-body {
   max-width: 700px;
-  min-height: 600px;
   margin: auto;
   padding-top: 16px;
   padding-bottom: 32px;
   padding-left: 16px;
   padding-right: 16px;
-  text-align:left;
+  text-align: left;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode",
+    "Lucida Sans", Tahoma, sans-serif;
+  color: #333333;
+}
+
+@media only screen and (min-width: 990px) {
+  #blog-body {
+    min-height: 590px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  #blog-body {
+    min-height: 360px;
+  }
+}
+
+.blog-article-link {
+  color: black;
+}
+.blog-article-link:hover {
+  color: #000099;
+}
+#blog-body [target="_blank"] {
+  font-weight: bold;
+  color: #0000b3;
+}
+#blog-body [target="_blank"]:hover {
+  color: blue;
 }
 
 .article-button {
   padding: 16px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   background-color: #000033;
   color: white;
   border-radius: 8px;
   cursor: pointer;
 }
-
 
 .article-list-item {
   text-decoration: none;
@@ -41,12 +67,13 @@
   margin-bottom: 16px;
 }
 
-#add-comment-form input, textarea {
+#add-comment-form input,
+textarea {
   display: block;
   width: 300px;
   padding: 8px;
   border-radius: 8px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
   border: 2px solid black;
   margin-bottom: 16px;
@@ -56,7 +83,8 @@
   width: 300px;
 }
 
-#upvotes-section button, p {
+#upvotes-section button,
+p {
   display: inline-block;
   margin-right: 16px;
 }

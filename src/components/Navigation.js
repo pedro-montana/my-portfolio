@@ -50,6 +50,7 @@ function Navigation() {
   const [isBlog, setBlog] = useState(false);
   const [isBlogAbout, setBlogAbout] = useState(false);
   const [isArticle, setArticle] = useState(false);
+  const [isVideos, setVideos] = useState(false);
 
   if (localStorage.getItem("myLanguage") == null) {
     localStorage.setItem("myLanguage", "cz");
@@ -63,16 +64,18 @@ function Navigation() {
     var contact = "Contact";
     var articles = "Articles";
     var language = "Language";
+    var videos = "Videos";
   }
   else {
     var about = "O mně";
     var home = "Domů";
     var homeTip = "Domů";
-    var showroom = "Mé Ukázky";
-    var showroomTip = "Mé Ukázky";
+    var showroom = "Mé ukázky";
+    var showroomTip = "Mé ukázky";
     var contact = "Kontakt";
     var articles = "Články";
     var language = "Jazyk";
+    var videos = "Videa";
   }
   const selectedPage = "text-warning";
   const blogNavMargin = "";
@@ -95,6 +98,7 @@ function Navigation() {
     }
     if (window.location.href.includes("/blog")) {
       setBlog(true);
+      document.title="Blog | My Portfolio";
     } else {
       setBlog(false);
     }
@@ -107,6 +111,11 @@ function Navigation() {
       setArticle(true);
     } else {
       setArticle(false);
+    }    
+    if (window.location.href.includes("/videos")) {
+      setVideos(true);
+    } else {
+      setVideos(false);
     }
   }, 300);
 
@@ -165,6 +174,7 @@ function Navigation() {
               setExpanded(false);
             }}
             data-tip={about}
+            data-place="bottom"
           >
             {about}
             <ReactTooltip effect="solid" arrowColor="transparent" />
@@ -181,6 +191,7 @@ function Navigation() {
               setExpanded(false);
             }}
             data-tip={showroomTip}
+            data-place="bottom"
           >
             {showroom} <BsCodeSlash className="mr-1" />
             <ReactTooltip effect="solid" arrowColor="transparent" />
@@ -197,24 +208,49 @@ function Navigation() {
               setExpanded(false);
             }}
             data-tip={contact}
+            data-place="bottom"
           >
             {contact}
             <ReactTooltip effect="solid" arrowColor="transparent" />
           </Link>
 
+          {/* VIDEO */}
+          <Link
+            className={
+              `nav-link ` +
+              (document.location.href.includes("/videos") || isVideos
+                ? `${selectedPage}`
+                : "text-white")
+            }
+            to="/videos"
+            onClick={() => {
+              setExpanded(false);
+            }}
+            data-tip={videos}
+            data-place="bottom"
+          >
+            {videos}
+            <ReactTooltip effect="solid" arrowColor="transparent" />
+          </Link>
+          {/* VIDEO */}
+
           {/* BLOG CONTENT */}
           <NavDropdown
-            title={<span className="text-warning">Blog</span>}
-            id="blog-nav"
+            title={<span className={document.location.href.includes("/blog") ? "text-warning" : "text-white"}
+            data-tip="Blog"
+            data-place="right"
+            data-offset="{'right':15}">
+              Blog
+            <ReactTooltip effect="solid" arrowColor="transparent" />
+            </span>}
+            id={document.location.href.includes("/blog") || isBlog ? "blog-nav" : ""}
             className={
               document.location.href.includes("/blog") || isBlog
                 ? `${selectedPage}`
-                : "d-none"
+                : ""
             }
             style={{ marginLeft: "auto", marginRight: "auto" }}
-            data-tip="Blog"
           >
-            <ReactTooltip effect="solid" arrowColor="transparent" />
             <NavDropdown.Item />
             <NavDropdown.Item className={blogNavMargin}>
               <Link
@@ -267,6 +303,7 @@ function Navigation() {
                   width="24"
                   alt="Language"
                   data-tip={language}
+                  data-place="left"
                 />
                 <ReactTooltip effect="solid" arrowColor="transparent" />
               </>

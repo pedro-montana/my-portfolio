@@ -25,6 +25,7 @@ const ArticlePage = ({ match }) => {
 
     const otherArticles = articleContent.filter(article => article.name !== name);
 
+
     return(
   <div id="blog-body">
 <NavBlog />

@@ -142,11 +142,17 @@ h1 {
 
 #error-page {
   position: relative;
-  margin: 100px 0 100px 0;
+  margin: 20px 0 30px 0;
 }
 
 @media only screen and (min-width: 990px) {
   .mobile-only {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .desktop-only {
     display: none;
   }
 }
@@ -175,19 +181,88 @@ h1 {
   }
 }
 .__react_component_tooltip {
-
   border-radius: 7px;
   z-index: 999;
-  
 }
 
 .__react_component_tooltip.show {
   background-color: rgba(0, 0, 0, 0.6);
   color: rgba(255, 255, 255, 0.8);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular",
+    sans-serif;
   padding: 8px 12px;
   font-weight: 100;
   font-size: 0.85rem;
   letter-spacing: normal;
   font-style: normal;
+}
+
+#up-button {
+  position: fixed;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  opacity: 0.7;
+}
+#up-button:hover {
+  color:rgb(36, 67, 92);
+}
+@media only screen and (max-width: 990px) {
+  #up-button {
+    bottom: 70px;
+    color: rgb(57, 106, 147);
+  }
+}
+@media only screen and (min-width: 990px) {
+  #up-button {
+    bottom: 100px;
+    color: rgb(126, 170, 205);
+  }
+}
+
+.video-thumb-element {
+  position: relative;
+  top: 0;
+  left: 5%;
+  max-width: 100%;
+  width: 600px;
+  cursor: pointer;
+  z-index: 5;
+}
+/* .video-thumb-element:hover {
+background-color:white;
+opacity:0.8;
+} */
+.video-with-button {
+  position: relative;
+  max-width: 90%;
+  width: 960px;
+  top: 0;
+  left: 0;
+}
+.video-element {
+  width: 600px;
+  max-width: 100%;
+}
+.play-button {
+  position: absolute;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+}
+@media only screen and (max-width: 769px) {
+  .play-button {
+    display: none;
+  }
+}
+@media only screen and (min-width: 620px) {
+  .play-button {
+    left: 45%;
+    top: 35%;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .mobile-only-video {
+    display: none;
+  }
 }

@@ -4,7 +4,9 @@ import AppointmentManager from "./AppointmentManager";
 
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
 import ReactTooltip from "react-tooltip";
+import ToHeadingButton from "../components/ToHeadingButton";
 
 import projectPic from "../img/pedro-projects-3x1-2160x1215-projects-logo.jpg";
 import formPic from "../img/pedro-form_example-16x9-767x431-vet-appointments.jpg";
@@ -56,25 +58,38 @@ function Showroom() {
   };
 
   if (value === "gb") {
-var vetAppointments = "Vet Appointments";
-var dog = "A dog is a man's best friend.";
-var setAppointment = "Set an Appointment";
-var blogExample = "Blog Example";
-var blogBody = "When you need to tell the World everything.";
-var visitBlog = "Visit My Blog";
-var bott = "In case of any questions feel free to ";
-var conMe = "Contact Me";
+    var heading = "My Work";
+    var vetAppointments = "Vet Appointments";
+    var dog = "A dog is a man's best friend.";
+    var setAppointment = "Set an Appointment";
+    var blogExample = "Blog Example";
+    var blogBody = "When you need to tell the World everything.";
+    var visitBlog = "Visit My Blog";
+    var bott = "In case of any questions feel free to ";
+    var conMe = "Contact Me";
+    var videosExample = "Video Page";
+    var videosBody = "Explore beautiful details of the world.";
+    var visitVideos = "Visit Videos";
+  } else {
+    var heading = "Moje Práce";
+    var vetAppointments = "Návstěva Veterináře";
+    var dog = "Pes je nejlepší přítel člověka.";
+    var setAppointment = "Domluvit schůzku";
+    var blogExample = "Ukázka blogu";
+    var blogBody = "Když musíte světu říci všechno.";
+    var visitBlog = "Do mého blogu";
+    var bott = "V případě jakýchkoliv dotazů mě prosím ";
+    var conMe = "kontaktujte";
+    var videosExample = "Videa";
+    var videosBody = "Objevte nádherné detaily světa.";
+    var visitVideos = "K Videím";
   }
-  else {
-var vetAppointments = "Návstěva Veterináře";
-var dog = "Pes je nejlepší přítel člověka.";
-var setAppointment = "Domluvit schůzku";
-var blogExample = "Ukázka blogu";
-var blogBody = "Když musíte světu říci všechno.";
-var visitBlog = "Do mého blogu";
-var bott = "V případě jýkýchkoliv dotazů mě prosím ";
-var conMe = "kontaktujte";
-}
+  React.useEffect(() => {
+    if (value === "gb") {
+    document.title="My Work | My Portfolio";}
+    else
+    document.title="Mé ukázky | My Portfolio";
+    })
 
   return (
     <>
@@ -90,44 +105,57 @@ var conMe = "kontaktujte";
             data-place="bottom"
           >
             Close Appointments
-        <ReactTooltip effect="solid" arrowColor="transparent" />
+            <ReactTooltip effect="solid" arrowColor="transparent" />
           </Button>
           <hr />
           <AppointmentManager />
         </>
       ) : (
         <>
+          <Container className="pt-5">
+            <ToHeadingButton headingHash="sh-heading" topOffset="-110px" />
+            <h1 id="sh-heading" className="font-weight-light">{heading}</h1>
+          </Container>
           <div className="container-fluid mb-5">
             <div className="row justify-content-md-center mt-5">
-            <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={formPic} />
-              <Card.Body>
-      <Card.Title>{vetAppointments}</Card.Title>
-      <Card.Text>{dog}</Card.Text>
-                <Button variant="primary" onClick={onClick}>
-                  {setAppointment}
-                </Button>
-              </Card.Body>
-            </Card>
-            <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={blogPic} />
-              <Card.Body>
-      <Card.Title>{blogExample}</Card.Title>
-                <Card.Text>
-                  {blogBody}
-                </Card.Text>
-                <Link to="/blog">
-      <Button variant="primary">{visitBlog}</Button>
-                </Link>
-              </Card.Body>
-            </Card>
+              <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
+                <Card.Img variant="top" src={formPic} />
+                <Card.Body>
+                  <Card.Title>{vetAppointments}</Card.Title>
+                  <Card.Text>{dog}</Card.Text>
+                  <Button variant="primary" onClick={onClick}>
+                    {setAppointment}
+                  </Button>
+                </Card.Body>
+              </Card>
+              <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
+                <Card.Img variant="top" src={blogPic} />
+                <Card.Body>
+                  <Card.Title>{blogExample}</Card.Title>
+                  <Card.Text>{blogBody}</Card.Text>
+                  <Link to="/blog">
+                    <Button variant="primary">{visitBlog}</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+              <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
+                <Card.Img variant="top" src="http://orangevalleycaa.org/api/media/images/thumbs/BalletInSmoke_054599628.png" />
+                <Card.Body>
+                  <Card.Title>{videosExample}</Card.Title>
+                  <Card.Text>{videosBody}</Card.Text>
+                  <Link to="/videos">
+                    <Button variant="primary">{visitVideos}</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
             </div>
-          </div>
-          <div className="mx-auto mt-5 mb-3">
-      {bott}<Link to="/contact">{conMe}</Link>
           </div>
         </>
       )}
+      <div className="mx-auto mt-5 mb-3">
+        {bott}
+        <Link to="/contact">{conMe}</Link>
+      </div>
     </>
   );
 }

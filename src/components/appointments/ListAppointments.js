@@ -52,7 +52,7 @@ class ListAppointments extends Component {
               </div>
 
               <div className="owner-name">
-                <span className="label-item">Owner name: </span>
+                <span className="label-item">Owner name: <br className="mobile-only" /></span>
                 <span
                   contentEditable
                   suppressContentEditableWarning
@@ -79,7 +79,7 @@ class ListAppointments extends Component {
                   )
                 }
               >
-                {item.aptNotes}
+                <br className="mobile-only" />{item.aptNotes}
               </div>
             </div>
           </div>
