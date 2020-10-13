@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import ReactGA from "react-ga";
 
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
@@ -70,11 +69,7 @@ function HomePage() {
     else
     document.title="My Portfolio";
     })
-    
 
-  React.useEffect(() => {
-    ReactGA.initialize('UA-180551372-1');
-  });
   return (
     <>
       <ControlledCarousel heading1={carHeading1} heading2={carHeading2} heading3={carHeading3} />
