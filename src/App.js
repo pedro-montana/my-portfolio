@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ReactGA from "react-ga";
+
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import Showroom from "./pages/Showroom";
@@ -19,6 +21,11 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 import "./Blog.css";
 import 'react-modal-video/scss/modal-video.scss';
+
+function initializeAnalytics(){
+ReactGA.initialize('UA-180551372-1');
+ReactGA.pageview('/my-portfolio');
+}
 
 function App() {
   return (
