@@ -71,7 +71,7 @@ function VideosPage() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(
-        "http://orangevalleycaa.org/api/videos"
+        "https://orangevalleycaa.org/api/videos"
       ).then((response) => response.json());
       setData(result);
     };
@@ -88,7 +88,7 @@ function VideosPage() {
         <video
           className="d-block w-100"
           src={
-            "http://orangevalleycaa.org/api/media/videos/UnderwaterPhotoMusic_062314189.mp4"
+            "https://orangevalleycaa.org/api/media/videos/UnderwaterPhotoMusic_062314189.mp4"
           }
           autoPlay
           loop
