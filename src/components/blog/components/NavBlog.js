@@ -23,7 +23,7 @@ const buttonVariant = "secondary";
 
 function NavBlog () {
   React.useEffect(() => {
-    if (window.location.href.includes("/blog")) {
+    if (window.location.href.includes("/my-portfolio/blog")) {
       document.title="Blog | My Portfolio";
     }
   }, [])

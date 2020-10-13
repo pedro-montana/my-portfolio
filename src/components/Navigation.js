@@ -81,37 +81,37 @@ function Navigation() {
   const blogNavMargin = "";
 
   setInterval(function () {
-    if (window.location.href.includes("/about")) {
+    if (window.location.href.includes("/my-portfolio/about")) {
       setAbout(true);
     } else {
       setAbout(false);
     }
-    if (window.location.href.includes("/showroom")) {
+    if (window.location.href.includes("/my-portfolio/showroom")) {
       setShowroom(true);
     } else {
       setShowroom(false);
     }
-    if (window.location.href.includes("/contact")) {
+    if (window.location.href.includes("/my-portfolio/contact")) {
       setContact(true);
     } else {
       setContact(false);
     }
-    if (window.location.href.includes("/blog")) {
+    if (window.location.href.includes("/my-portfolio/blog")) {
       setBlog(true);
     } else {
       setBlog(false);
     }
-    if (window.location.href.includes("/blog/blog-about")) {
+    if (window.location.href.includes("/my-portfolio/blog/blog-about")) {
       setBlogAbout(true);
     } else {
       setBlogAbout(false);
     }
-    if (window.location.href.includes("/blog/article")) {
+    if (window.location.href.includes("/my-portfolio/blog/article")) {
       setArticle(true);
     } else {
       setArticle(false);
     }    
-    if (window.location.href.includes("/videos")) {
+    if (window.location.href.includes("/my-portfolio/videos")) {
       setVideos(true);
     } else {
       setVideos(false);
@@ -146,7 +146,7 @@ function Navigation() {
 
         <span
           className={
-            document.location.href.includes("/blog") || isBlog
+            document.location.href.includes("/my-portfolio/blog") || isBlog
               ? "mobile-only btn-lg"
               : "d-none"
           }
@@ -164,7 +164,7 @@ function Navigation() {
           <Link
             className={
               `nav-link ` +
-              (document.location.href.includes("/about") || isAbout
+              (document.location.href.includes("/my-portfolio/about") || isAbout
                 ? `${selectedPage}`
                 : "text-white")
             }
@@ -181,7 +181,7 @@ function Navigation() {
           <Link
             className={
               `nav-link ` +
-              (document.location.href.includes("/showroom") || isShowroom
+              (document.location.href.includes("/my-portfolio/showroom") || isShowroom
                 ? `${selectedPage}`
                 : "text-white")
             }
@@ -198,7 +198,7 @@ function Navigation() {
           <Link
             className={
               `nav-link ` +
-              (document.location.href.includes("/contact") || isContact
+              (document.location.href.includes("/my-portfolio/contact") || isContact
                 ? `${selectedPage}`
                 : "text-white")
             }
@@ -217,7 +217,7 @@ function Navigation() {
           <Link
             className={
               `nav-link ` +
-              (document.location.href.includes("/videos") || isVideos
+              (document.location.href.includes("/my-portfolio/videos") || isVideos
                 ? `${selectedPage}`
                 : "text-white")
             }
@@ -235,16 +235,16 @@ function Navigation() {
 
           {/* BLOG CONTENT */}
           <NavDropdown
-            title={<span className={document.location.href.includes("/blog") ? "text-warning" : "text-white"}
+            title={<span className={document.location.href.includes("/my-portfolio/blog") ? "text-warning" : "text-white"}
             data-tip="Blog"
             data-place="right"
             data-offset="{'right':15}">
               Blog
             <ReactTooltip effect="solid" arrowColor="transparent" />
             </span>}
-            id={document.location.href.includes("/blog") || isBlog ? "blog-nav" : ""}
+            id={document.location.href.includes("/my-portfolio/blog") || isBlog ? "blog-nav" : ""}
             className={
-              document.location.href.includes("/blog") || isBlog
+              document.location.href.includes("/my-portfolio/blog") || isBlog
                 ? `${selectedPage}`
                 : ""
             }
