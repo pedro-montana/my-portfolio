@@ -8,7 +8,7 @@ const scrollTop = () => {
 const ArticlesList = ({articles}) => (
     <>
     {articles.map((article, key) => (
-    <Link className="blog-article-link" style={{scrollBehavior: "auto"}} key={key} to={`/blog/article/${article.name}`} onClick={scrollTop}>
+    <Link className="blog-article-link" style={{scrollBehavior: "auto"}} key={key} to={`/my-portfolio/blog/article/${article.name}`} onClick={scrollTop}>
       <h3>{article.title}</h3>
       <p>{article.content[0].substring(0, 150)}...</p>
       <br/>
