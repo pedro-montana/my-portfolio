@@ -180,13 +180,14 @@ h1 {
     display: none;
   }
 }
-.__react_component_tooltip {
+.__react_component_tooltip.show {
   border-radius: 7px;
   z-index: 999;
 }
 
 .__react_component_tooltip.show {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(26, 26, 26);
+  opacity: 0.6;
   color: rgba(255, 255, 255, 0.8);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular",
     sans-serif;
@@ -250,6 +251,14 @@ opacity:0.8;
   z-index: 10;
   cursor: pointer;
 }
+.play-button-duration {
+  position: absolute;
+  color: black;
+  text-shadow: 0px 0px 3px white;
+  z-index: 10;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 769px) {
   .play-button {
     display: none;
@@ -259,6 +268,19 @@ opacity:0.8;
   .play-button {
     left: 45%;
     top: 35%;
+  }
+}
+@media only screen and (max-width: 769px) {
+
+  .play-button-duration {
+    display: none;
+  }
+}
+@media only screen and (min-width: 620px) {
+
+  .play-button-duration {
+    left: 45%;
+    top: 79%;
   }
 }
 @media only screen and (min-width: 769px) {

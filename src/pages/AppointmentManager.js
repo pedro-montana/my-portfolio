@@ -125,6 +125,8 @@ class AppointmentManager extends Component {
           <div className="row">
             <div className="col-md-12">
               <div className="container">
+                <h1>Welcome Doctor</h1>
+                <p>Feel free to add or edit your appointments:</p>
                 <AddAppointments
                   formDisplay={this.state.formDisplay}
                   toggleForm={this.toggleForm}
@@ -136,6 +138,7 @@ class AppointmentManager extends Component {
                   changeOrder={this.changeOrder}
                   searchApts={this.searchApts}
                 />
+                <p className="text-left"><i>To edit: click on text desired to change.<br />To delete: press red cross.</i></p>
                 <ListAppointments
                   appointments={filteredApts}
                   deleteAppointment={this.deleteAppointment}

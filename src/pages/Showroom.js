@@ -112,8 +112,8 @@ function Showroom() {
         </>
       ) : (
         <>
-          <Container className="pt-5">
-            <ToHeadingButton headingHash="sh-heading" topOffset="-110px" />
+          <Container className="mt-1">
+            <ToHeadingButton headingHash="sh-heading" topOffset="-80px" />
             <h1 id="sh-heading" className="font-weight-light">{heading}</h1>
           </Container>
           <div className="container-fluid mb-5">

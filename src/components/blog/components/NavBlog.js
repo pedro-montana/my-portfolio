@@ -18,9 +18,15 @@ const useStateWithLocalStorage = (localStorageKey) => {
   return [value, setValue];
 };
 
+
 const buttonVariant = "secondary";
 
 function NavBlog () {
+  React.useEffect(() => {
+    if (window.location.href.includes("/blog")) {
+      document.title="Blog | My Portfolio";
+    }
+  }, [])
 const [value, setValue] = useStateWithLocalStorage("myLanguage");
 if (value === "gb")
 {

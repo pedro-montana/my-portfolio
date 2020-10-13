@@ -63,8 +63,8 @@ function Contact() {
   return (
     <>
       <img className="d-block w-100" src={smallPic} alt="First slide" fluid />
-      <Container className="p-5">
-        <ToHeadingButton headingHash="c-heading" topOffset="-110px" />
+      <Container className="pl-5 pb-5 pr-5 mt-1">
+        <ToHeadingButton headingHash="c-heading" topOffset="-80px" />
         <h1 id="c-heading" className="font-weight-light m-3">{heading}</h1>
       </Container>
       <h4>{subheading}</h4>

@@ -8,7 +8,7 @@ import baloonsSmall from "../img/pedro-baloons-16x9-2160x1215-bb.jpg";
 import lake from "../img/pedro-man_at_lake-3x1-2160x720-bb.jpg";
 import lakeSmall from "../img/pedro-man_at_lake-16x9-2160x1215-bb.jpg";
 
-function ControlledCarousel() {
+function ControlledCarousel(props) {
   const [index, setIndex] = useState(0);
 
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -37,9 +37,10 @@ function ControlledCarousel() {
     slide2 = picSmall;
     slide3 = baloonsSmall;
   }
+  var unsplashed = "Image credit: Unsplashed.com";
 
-  
-    return (
+  return (
+    <>
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
@@ -49,26 +50,27 @@ function ControlledCarousel() {
         <Carousel.Item>
           <img className="d-block w-100" src={slide1} alt="First slide" />
           <Carousel.Caption>
-            <h1>See</h1>
+            <h1>{props.heading1}</h1>
+            <div>{unsplashed}</div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={slide2} alt="Second slide" />
-
           <Carousel.Caption>
-            <h1>More</h1>
+            <h1>{props.heading2}</h1>
+          <div>{unsplashed}</div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img className="d-block w-100" src={slide3} alt="Third slide" />
           <Carousel.Caption>
-            <h1>Now</h1>
+            <h1>{props.heading3}</h1>
+          <div>{unsplashed}</div>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    );
-  }
-
-
+    </>
+  );
+}
 
 export default ControlledCarousel;

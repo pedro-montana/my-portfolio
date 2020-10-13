@@ -98,7 +98,6 @@ function Navigation() {
     }
     if (window.location.href.includes("/blog")) {
       setBlog(true);
-      document.title="Blog | My Portfolio";
     } else {
       setBlog(false);
     }

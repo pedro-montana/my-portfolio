@@ -33,7 +33,10 @@ function HomePage() {
   var aboutIntro = "A few words about myself.";
   var showIntro = "Take a look at my work.";
   var contIntro = "Get in touch.";
-  var intro = "Zde chci ukázat svoje dynamicky se prohlubující znalosti v ReactJS.<br />V ukázkách práce je jednoduchý blog, organizátor schůzek a video list z API..."
+  var intro = "Here I want to prove my dynamically deepening knowledge of ReactJS.<br />In portfolio is to be seen a simple blog, appointment manager and video list from an API...";
+  var carHeading1 = "See";
+  var carHeading2 = "More";
+  var carHeading3 = "Now";
 
   if (value === "gb") {
     welcome = "Welcome";
@@ -43,7 +46,10 @@ function HomePage() {
     aboutIntro = "A few words about myself.";
     showIntro = "Take a look at my work.";
     contIntro = "Get in touch.";
-    intro = "Here I want to prove my dynamically deepening knowledge of ReactJS.<br />In portfolio is to be seen a simple blog, appointment manager and video list from an API..."
+    intro = "Here I want to show my progressing knowledge of ReactJS.<br />In portfolio is to be seen a simple blog, appointment manager and video list from an API...";
+    carHeading1 = "See";
+    carHeading2 = "More";
+    carHeading3 = "Now";
   } else {
     welcome = "Vítejte";
     aboutBtn = "O mně";
@@ -52,8 +58,11 @@ function HomePage() {
     aboutIntro = "Pár slov o mně.";
     showIntro = "Prozkoumejte moji práci.";
     contIntro = "Zůstaňme ve spojení.";
-    intro = "Zde chci ukázat svoje dynamicky se prohlubující znalosti v ReactJS.<br />V mém portfoliu je jednoduchý blog, organizátor schůzek a video list z API..."
-}
+    intro = "Zde chci ukázat svoje progresivní znalosti v ReactJS.<br />V mém portfoliu je jednoduchý blog, organizátor schůzek a video list z API...";
+    carHeading1 = "Vidět";
+    carHeading2 = "Víc";
+    carHeading3 = "Nyní";
+  }
   React.useEffect(() => {
     if (value === "gb") {
     document.title="My Portfolio";}
@@ -62,10 +71,10 @@ function HomePage() {
     })
   return (
     <>
-      <ControlledCarousel />
+      <ControlledCarousel heading1={carHeading1} heading2={carHeading2} heading3={carHeading3} />
 
-      <Container id="hp-heading" className="pl-5 pb-5 pr-5 mt-5">
-        <ToHeadingButton headingHash="hp-heading" topOffset="-130px" />
+      <Container id="hp-heading" className="pl-5 pb-5 pr-5 mt-1">
+        <ToHeadingButton headingHash="hp-heading" topOffset="-110px" />
         <h1 className="font-weight-light">{welcome}</h1>
   <p className="py-5" dangerouslySetInnerHTML={{__html: intro}}></p>
       </Container>
