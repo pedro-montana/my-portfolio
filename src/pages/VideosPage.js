@@ -110,7 +110,7 @@ function VideosPage() {
               <h5 className="text-left ml-3 mobile-only-video">Video:</h5>
               <h6 className="text-left font-weight-light ml-3 mobile-only-video">Duration: {video.duration}</h6>
               <VideoOverlay
-                currentUrl={video.video_url}
+                currentUrl={video.video_url.includes("https://") ? video.video_url : video.video_url.replace("http://", "https://")}
                 currentThumbnail={video.image}
                 currentHeading={video.name}
                 duration={video.duration}
