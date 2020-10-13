@@ -72,7 +72,7 @@ function HomePage() {
     })
     
 
-  useEffect(() => {
+  React.useEffect(() => {
     ReactGA.initialize('UA-180551372-1');
   });
   return (
