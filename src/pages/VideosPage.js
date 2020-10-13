@@ -29,7 +29,7 @@ useEffect(() => {
 });
 
   return (
-    <React.Fragment>
+    <>
       <ModalVideo
         channel="custom"
         isOpen={isOpen}
@@ -60,7 +60,7 @@ useEffect(() => {
       >
         {props.duration}
       </h2>
-    </React.Fragment>
+    </>
   );
 };
 
