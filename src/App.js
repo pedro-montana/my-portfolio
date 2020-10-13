@@ -26,6 +26,7 @@ import 'react-modal-video/scss/modal-video.scss';
 ReactGA.pageview('/my-portfolio');
 */}
 ReactGA.initialize('UA-180551372-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
 
