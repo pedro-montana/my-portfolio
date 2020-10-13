@@ -176,7 +176,7 @@ h1 {
   margin: auto;
 }
 @media only screen and (max-width: 990px) {
-  .__react_component_tooltip {
+  .__react_component_tooltip.show {
     display: none;
   }
 }

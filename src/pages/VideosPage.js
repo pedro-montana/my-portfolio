@@ -82,6 +82,7 @@ function VideosPage() {
       document.title = "Videos | My Portfolio";
     } else document.title = "Videa | My Portfolio";
   });
+
   return (
     <>
       <div style={{ maxHeight: "600px", overflow: "hidden" }}>
@@ -110,7 +111,7 @@ function VideosPage() {
               <h5 className="text-left ml-3 mobile-only-video">Video:</h5>
               <h6 className="text-left font-weight-light ml-3 mobile-only-video">Duration: {video.duration}</h6>
               <VideoOverlay
-                currentUrl={video.video_url.includes("https://") ? video.video_url : video.video_url.replace("http://", "https://")}
+                currentUrl={video.video_url.includes("https://") ? video.video_url : "https://" + video.video_url.substring(5, video.video_url.length)}
                 currentThumbnail={video.image}
                 currentHeading={video.name}
                 duration={video.duration}
