@@ -86,7 +86,7 @@ function AboutPage() {
           <Col>
             <h2 className="mb-2 font-weight-light">{heading}</h2>
             <h5 className="font-weight-light">
-              {subheading} <Link to="/showroom">{persWork}</Link>.
+              {subheading} <Link to="/my-portfolio/showroom">{persWork}</Link>.
   </h5><p>&nbsp;</p>
             <p>{body}</p>
             <p>{body2}</p>

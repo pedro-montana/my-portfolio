@@ -85,7 +85,7 @@ function HomePage() {
               <img src={myPic} className="card-img-top" alt="Office building" />
               <div className="card-body">
                 <h5 className="mb-3">{aboutIntro}</h5>
-                <Link to="/about">
+                <Link to="/my-portfolio/about">
                   <Button variant="outline-success">{aboutBtn}</Button>
                 </Link>
               </div>
@@ -100,7 +100,7 @@ function HomePage() {
               />
               <div className="card-body">
                 <h5 className="mb-3">{showIntro}</h5>
-                <Link to="/showroom">
+                <Link to="/my-portfolio/showroom">
                   <Button variant="outline-success">{portBtn}</Button>
                 </Link>
               </div>
@@ -115,7 +115,7 @@ function HomePage() {
               />
               <div className="card-body">
                 <h5 className="mb-3">{contIntro}</h5>
-                <Link to="/contact">
+                <Link to="/my-portfolio/contact">
                   <Button variant="outline-success">{contBtn}</Button>
                 </Link>
               </div>

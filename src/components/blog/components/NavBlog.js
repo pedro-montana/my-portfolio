@@ -45,16 +45,16 @@ return(
       <img className="mb-1 d-block" style={{position: "relative",top:"-16px", left:"-16px", right: "-16px", width: "110%"}} src={smallPic} alt="Library" fluid />
 
     <div id="nav-blog" className="d-flex mb-1">
-      <Link to="/blog" className="mx-2">
+      <Link to="/my-portfolio/blog" className="mx-2">
         <Button variant={buttonVariant}>{homeBtn}</Button>
       </Link>
-      <Link to="/blog/blog-about" className="mx-2">
+      <Link to="/my-portfolio/blog/blog-about" className="mx-2">
         <Button variant={buttonVariant}>{aboutBtn}</Button>
       </Link>
-      <Link to="/blog/articles-list" className="mx-2">
+      <Link to="/my-portfolio/blog/articles-list" className="mx-2">
         <Button variant={buttonVariant}>{articlesBtn}</Button>
       </Link>
-      <Link to="/showroom" className="mx-2">
+      <Link to="/my-portfolio/showroom" className="mx-2">
         <Button variant="outline-dark" data-tip={value === "gb" ? "Showroom" : "Mé ukázky"} data-place="bottom">{exitBtn}</Button>
         <ReactTooltip effect="solid" arrowColor="transparent" />
       </Link>

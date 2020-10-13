@@ -28,17 +28,17 @@ function App() {
           <Navigation />
           <Switch>
           <ScrollToTop>
-            <Route path="/" component={HomePage} exact />
-            <Route path="/about" component={AboutPage} exact />
-            <Route path="/showroom" component={Showroom} exact />
-            <Route path="/contact" component={Contact} exact />
-            <Route path="/videos" component={VideosPage} exact />
+            <Route path="/my-portfolio/" component={HomePage} exact />
+            <Route path="/my-portfolio/about" component={AboutPage} exact />
+            <Route path="/my-portfolio/showroom" component={Showroom} exact />
+            <Route path="/my-portfolio/contact" component={Contact} exact />
+            <Route path="/my-portfolio/videos" component={VideosPage} exact />
             
             {/* BLOG CONTENT */}
-            <Route path="/blog" component={Blog} exact />
-            <Route path="/blog/blog-about" component={BlogAbout} />
-            <Route path="/blog/articles-list" component={BlogArticlesListPage} />
-            <Route path="/blog/article/:name" component={BlogArticlePage} />
+            <Route path="/my-portfolio/blog" component={Blog} exact />
+            <Route path="/my-portfolio/blog/blog-about" component={BlogAbout} />
+            <Route path="/my-portfolio/blog/articles-list" component={BlogArticlesListPage} />
+            <Route path="/my-portfolio/blog/article/:name" component={BlogArticlePage} />
             {/* BLOG CONTENT */}
             </ScrollToTop>
 

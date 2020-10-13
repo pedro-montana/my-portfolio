@@ -133,7 +133,7 @@ function Showroom() {
                 <Card.Body>
                   <Card.Title>{blogExample}</Card.Title>
                   <Card.Text>{blogBody}</Card.Text>
-                  <Link to="/blog">
+                  <Link to="/my-portfolio/blog">
                     <Button variant="primary">{visitBlog}</Button>
                   </Link>
                 </Card.Body>
@@ -143,7 +143,7 @@ function Showroom() {
                 <Card.Body>
                   <Card.Title>{videosExample}</Card.Title>
                   <Card.Text>{videosBody}</Card.Text>
-                  <Link to="/videos">
+                  <Link to="/my-portfolio/videos">
                     <Button variant="primary">{visitVideos}</Button>
                   </Link>
                 </Card.Body>
@@ -154,7 +154,7 @@ function Showroom() {
       )}
       <div className="mx-auto mt-5 mb-3">
         {bott}
-        <Link to="/contact">{conMe}</Link>
+        <Link to="/my-portfolio/contact">{conMe}</Link>
       </div>
     </>
   );

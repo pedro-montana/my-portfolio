@@ -127,7 +127,7 @@ function Navigation() {
     >
       <Navbar.Brand>
         <Link
-          to="/"
+          to="/my-portfolio/"
           id="button2"
           className="navbar-brand text-warning btn btn-outline-light"
           onClick={() => {
@@ -168,7 +168,7 @@ function Navigation() {
                 ? `${selectedPage}`
                 : "text-white")
             }
-            to="/about"
+            to="/my-portfolio/about"
             onClick={() => {
               setExpanded(false);
             }}
@@ -185,7 +185,7 @@ function Navigation() {
                 ? `${selectedPage}`
                 : "text-white")
             }
-            to="/showroom"
+            to="/my-portfolio/showroom"
             onClick={() => {
               setExpanded(false);
             }}
@@ -202,7 +202,7 @@ function Navigation() {
                 ? `${selectedPage}`
                 : "text-white")
             }
-            to="/contact"
+            to="/my-portfolio/contact"
             onClick={() => {
               setExpanded(false);
             }}
@@ -221,7 +221,7 @@ function Navigation() {
                 ? `${selectedPage}`
                 : "text-white")
             }
-            to="/videos"
+            to="/my-portfolio/videos"
             onClick={() => {
               setExpanded(false);
             }}
@@ -254,7 +254,7 @@ function Navigation() {
             <NavDropdown.Item className={blogNavMargin}>
               <Link
                 className="text-dark"
-                to="/blog"
+                to="/my-portfolio/blog"
                 onClick={() => {
                   setExpanded(false);
                 }}
@@ -267,7 +267,7 @@ function Navigation() {
             <NavDropdown.Item className={blogNavMargin}>
               <Link
                 className="text-dark"
-                to="/blog/blog-about"
+                to="/my-portfolio/blog/blog-about"
                 onClick={() => {
                   setExpanded(false);
                 }}
@@ -280,7 +280,7 @@ function Navigation() {
             <NavDropdown.Item className={blogNavMargin}>
               <Link
                 className="text-dark"
-                to="/blog/articles-list"
+                to="/my-portfolio/blog/articles-list"
                 onClick={() => {
                   setExpanded(false);
                 }}

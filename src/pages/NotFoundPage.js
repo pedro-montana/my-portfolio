@@ -31,7 +31,7 @@ document.title="😕 My Portfolio";
       <div id="error-page">
     <h1>404: Page Not Found 😕</h1>
     <h5>Go hard, or</h5>
-    <Link to="/">
+    <Link to="/my-portfolio/">
         <Button variant="primary" style={{backgroundColor:"rgb(70, 130, 180)"}}>Go Home</Button>
     </Link>
     </div>
