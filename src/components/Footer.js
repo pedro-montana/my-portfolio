@@ -62,7 +62,7 @@ function Footer () {
           </a>
           <a
             className="text-white"
-            href="https://www.linkedin.com/in/petr-horáček-76904b1b7"
+            href="https://www.linkedin.com/in/petr-horacek"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -110,7 +110,7 @@ function Footer () {
           </a>
           <a
             className="text-white"
-            href="https://www.linkedin.com/in/petr-horáček-76904b1b7"
+            href="https://www.linkedin.com/in/petr-horacek"
             rel="noopener noreferrer"
             target="_blank"
             title="LinkedIn"
