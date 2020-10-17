@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import errorPic from "../img/pedro-error_dog-3x1-2160x720-bb.jpg";
@@ -19,12 +19,34 @@ function NotFoundPage () {
     } else {
       smallPic = errorPicSmall;
     }
-
+const [is404,  set404] = useState(false);
     React.useEffect(() => {
-        
-document.title="😕 My Portfolio";
+        if (
+          !document.location.href.endsWith("/my-portfolio/") && 
+          !document.location.href.endsWith("/my-portfolio") && 
+        !document.location.href.endsWith("/my-portfolio/about") && 
+        !document.location.href.endsWith("/my-portfolio/about/") && 
+        !document.location.href.endsWith("/my-portfolio/showroom") && 
+        !document.location.href.endsWith("/my-portfolio/showroom/") && 
+        !document.location.href.endsWith("/my-portfolio/contact") && 
+        !document.location.href.endsWith("/my-portfolio/contact/") && 
+        !document.location.href.endsWith("/my-portfolio/videos/") && 
+        !document.location.href.endsWith("/my-portfolio/videos") && 
+        !document.location.href.endsWith("/my-portfolio/blog") && 
+        !document.location.href.endsWith("/my-portfolio/blog/") && 
+        !document.location.href.endsWith("/my-portfolio/blog/blog-about") && 
+        !document.location.href.endsWith("/my-portfolio/blog/blog-about/") && 
+        !document.location.href.endsWith("/my-portfolio/blog/articles-list") && 
+        !document.location.href.endsWith("/my-portfolio/blog/articles-list/") && 
+        !document.location.href.includes("/my-portfolio/blog/article/")
+        )
+{document.title="😕 My Portfolio";
+set404(true);
+}
+else {set404(false);}
 })
-  
+  if (is404)
+  {
     return(
         <>
       <img className="d-block w-100" src={smallPic} alt="First slide" fluid />
@@ -36,6 +58,10 @@ document.title="😕 My Portfolio";
     </Link>
     </div>
     </>
-    )};
+    )}
+  else {
+    return null;
+  }
+  };
 
 export default NotFoundPage;

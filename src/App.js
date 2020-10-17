@@ -45,13 +45,13 @@ function App() {
             
             {/* BLOG CONTENT */}
             <Route path="/my-portfolio/blog" component={Blog} exact />
-            <Route path="/my-portfolio/blog/blog-about" component={BlogAbout} />
-            <Route path="/my-portfolio/blog/articles-list" component={BlogArticlesListPage} />
+            <Route path="/my-portfolio/blog/blog-about" component={BlogAbout} exact />
+            <Route path="/my-portfolio/blog/articles-list" component={BlogArticlesListPage} exact />
             <Route path="/my-portfolio/blog/article/:name" component={BlogArticlePage} />
             {/* BLOG CONTENT */}
-            </ScrollToTop>
-
             <Route component={NotFoundPage} />
+
+            </ScrollToTop>
           </Switch>
           <UpButton />
           <Footer />
