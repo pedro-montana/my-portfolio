@@ -51,6 +51,7 @@ function Navigation() {
   const [isBlogAbout, setBlogAbout] = useState(false);
   const [isArticle, setArticle] = useState(false);
   const [isVideos, setVideos] = useState(false);
+  const [isLearning, setLearning] = useState(false);
 
   if (localStorage.getItem("myLanguage") == null) {
     localStorage.setItem("myLanguage", "cz");
@@ -65,6 +66,7 @@ function Navigation() {
     var articles = "Articles";
     var language = "Language";
     var videos = "Videos";
+    var learning = "Certificates";
   }
   else {
     var about = "O mně";
@@ -76,6 +78,7 @@ function Navigation() {
     var articles = "Články";
     var language = "Jazyk";
     var videos = "Videa";
+    var learning = "Certifikáty";
   }
   const selectedPage = "text-warning";
   const blogNavMargin = "";
@@ -115,6 +118,11 @@ function Navigation() {
       setVideos(true);
     } else {
       setVideos(false);
+    }
+    if (window.location.href.includes("/my-portfolio/learning")) {
+      setLearning(true);
+    } else {
+      setLearning(false);
     }
   }, 300);
 
@@ -232,6 +240,25 @@ function Navigation() {
             <ReactTooltip effect="solid" arrowColor="transparent" />
           </Link>
           {/* VIDEO */}
+
+          <Link
+            className={
+              `nav-link ` +
+              (document.location.href.includes("/my-portfolio/learning") || isLearning
+                ? `${selectedPage}`
+                : "text-white")
+            }
+            to="/my-portfolio/learning"
+            onClick={() => {
+              setExpanded(false);
+            }}
+            data-tip={learning}
+            data-place="bottom"
+          >
+            {learning}
+            <ReactTooltip effect="solid" arrowColor="transparent" />
+          </Link>
+
 
           {/* BLOG CONTENT */}
           <NavDropdown

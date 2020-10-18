@@ -43,6 +43,8 @@ function AboutPage() {
     var about = "About Me";
     var heading = "I'm Petr";
     var subheading = "This web is an example of my";
+    var subheading2 = "Take a look at my";
+    var certificates = "certificates";
     var persWork = "personal works";
     var body =
       "For almost a year now I've been working as a web content editor. Among my responsibilities is to provide the best service of maintaining website for our main client, one of the biggest world's car manufacturers.";
@@ -52,6 +54,8 @@ function AboutPage() {
     var about = "O mně";
     var heading = "Jmenuji se Petr";
     var subheading = "Tyto stránky jsou ukázkou mé";
+    var subheading2 = "Zobrazit";
+    var certificates = "certifikáty";
     var persWork = "osobní práce";
     var body =
       "Už téměr rok pracuji jako web content editor v\u00a0přední digitální agentuře v\u00a0České republice. Mezi mé povinnosti patří poskytnout kvalitní služby našemu klientovi, jedné z nějvětších světových automobilek.";
@@ -70,7 +74,9 @@ function AboutPage() {
       <img className="d-block w-100" src={smallPic} alt="Vyšehrad" fluid />
       <Container className="pt-5">
         <ToHeadingButton headingHash="a-heading" topOffset="-110px" />
-        <h1 id="a-heading" className="font-weight-light">{about}</h1>
+        <h1 id="a-heading" className="font-weight-light">
+          {about}
+        </h1>
       </Container>
 
       <Container className="my-5">
@@ -87,9 +93,10 @@ function AboutPage() {
             <h2 className="mb-2 font-weight-light">{heading}</h2>
             <h5 className="font-weight-light">
               {subheading} <Link to="/my-portfolio/showroom">{persWork}</Link>.
-  </h5><p>&nbsp;</p>
+            </h5>
             <p>{body}</p>
             <p>{body2}</p>
+  <p>{subheading2} <Link to="/my-portfolio/learning">{certificates}</Link>.</p>
           </Col>
         </Row>
       </Container>

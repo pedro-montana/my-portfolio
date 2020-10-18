@@ -21,6 +21,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 import "./Blog.css";
 import 'react-modal-video/scss/modal-video.scss';
+import LinkedInLearning from "./pages/LinkedInLearning";
 
 {/*ReactGA.initialize('UA-180551372-1');
 ReactGA.pageview('/my-portfolio');
@@ -42,6 +43,7 @@ function App() {
             <Route path="/my-portfolio/showroom" component={Showroom} exact />
             <Route path="/my-portfolio/contact" component={Contact} exact />
             <Route path="/my-portfolio/videos" component={VideosPage} exact />
+            <Route path="/my-portfolio/learning" component={LinkedInLearning} exact />
             
             {/* BLOG CONTENT */}
             <Route path="/my-portfolio/blog" component={Blog} exact />
@@ -49,9 +51,9 @@ function App() {
             <Route path="/my-portfolio/blog/articles-list" component={BlogArticlesListPage} exact />
             <Route path="/my-portfolio/blog/article/:name" component={BlogArticlePage} />
             {/* BLOG CONTENT */}
-            <Route component={NotFoundPage} />
 
             </ScrollToTop>
+            <Route component={NotFoundPage} />
           </Switch>
           <UpButton />
           <Footer />

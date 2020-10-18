@@ -294,3 +294,9 @@ opacity:0.8;
     display: none;
   }
 }
+
+.my-certificate {
+  display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}

@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import ReactTooltip from "react-tooltip";
 import ToHeadingButton from "../components/ToHeadingButton";
+import {BiBadgeCheck} from "react-icons/bi";
 
 import projectPic from "../img/pedro-projects-3x1-2160x1215-projects-logo.jpg";
 import formPic from "../img/pedro-form_example-16x9-767x431-vet-appointments.jpg";
@@ -70,6 +71,9 @@ function Showroom() {
     var videosExample = "Video Page";
     var videosBody = "Explore beautiful details of the world.";
     var visitVideos = "Visit Videos";
+    var certTitle = "Certificates";
+    var certBody = "Steps of Learning React.";
+    var visitCert = "View Certificates";
   } else {
     var heading = "Moje Práce";
     var vetAppointments = "Návstěva Veterináře";
@@ -83,13 +87,15 @@ function Showroom() {
     var videosExample = "Videa";
     var videosBody = "Objevte nádherné detaily světa.";
     var visitVideos = "K Videím";
+    var certTitle = "Certifikáty";
+    var certBody = "Progres ve studiu Reactu.";
+    var visitCert = "Zobrazit certifikáty";
   }
   React.useEffect(() => {
     if (value === "gb") {
-    document.title="My Work | My Portfolio";}
-    else
-    document.title="Mé ukázky | My Portfolio";
-    })
+      document.title = "My Work | My Portfolio";
+    } else document.title = "Mé ukázky | My Portfolio";
+  });
 
   return (
     <>
@@ -114,7 +120,9 @@ function Showroom() {
         <>
           <Container className="mt-1">
             <ToHeadingButton headingHash="sh-heading" topOffset="-80px" />
-            <h1 id="sh-heading" className="font-weight-light">{heading}</h1>
+            <h1 id="sh-heading" className="font-weight-light">
+              {heading}
+            </h1>
           </Container>
           <div className="container-fluid mb-5">
             <div className="row justify-content-md-center mt-5">
@@ -139,12 +147,25 @@ function Showroom() {
                 </Card.Body>
               </Card>
               <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="http://orangevalleycaa.org/api/media/images/thumbs/BalletInSmoke_054599628.png" />
+                <Card.Img
+                  variant="top"
+                  src="http://orangevalleycaa.org/api/media/images/thumbs/BalletInSmoke_054599628.png"
+                />
                 <Card.Body>
                   <Card.Title>{videosExample}</Card.Title>
                   <Card.Text>{videosBody}</Card.Text>
                   <Link to="/my-portfolio/videos">
                     <Button variant="primary">{visitVideos}</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+              <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
+                <BiBadgeCheck className="mt-2 mx-auto text-success" size="140" />
+                <Card.Body>
+                  <Card.Title className="mt-4">{certTitle}</Card.Title>
+                  <Card.Text>{certBody}</Card.Text>
+                  <Link to="/my-portfolio/learning">
+                    <Button variant="primary">{visitCert}</Button>
                   </Link>
                 </Card.Body>
               </Card>
