@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.ba0cebc2.chunk.css",
-    "main.js": "/my-portfolio/static/js/main.8b8b0b74.chunk.js",
-    "main.js.map": "/my-portfolio/static/js/main.8b8b0b74.chunk.js.map",
+    "main.js": "/my-portfolio/static/js/main.05ef15fa.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.05ef15fa.chunk.js.map",
     "runtime-main.js": "/my-portfolio/static/js/runtime-main.8b00eace.js",
     "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.8b00eace.js.map",
     "static/css/2.5259f885.chunk.css": "/my-portfolio/static/css/2.5259f885.chunk.css",
-    "static/js/2.158a1994.chunk.js": "/my-portfolio/static/js/2.158a1994.chunk.js",
-    "static/js/2.158a1994.chunk.js.map": "/my-portfolio/static/js/2.158a1994.chunk.js.map",
+    "static/js/2.189ff775.chunk.js": "/my-portfolio/static/js/2.189ff775.chunk.js",
+    "static/js/2.189ff775.chunk.js.map": "/my-portfolio/static/js/2.189ff775.chunk.js.map",
     "index.html": "/my-portfolio/index.html",
-    "precache-manifest.e94a9d4a4503d369c84bfecf4259f96e.js": "/my-portfolio/precache-manifest.e94a9d4a4503d369c84bfecf4259f96e.js",
+    "precache-manifest.0739f72f08ac6b7c0ca07c6a5f73cca2.js": "/my-portfolio/precache-manifest.0739f72f08ac6b7c0ca07c6a5f73cca2.js",
     "service-worker.js": "/my-portfolio/service-worker.js",
     "static/css/2.5259f885.chunk.css.map": "/my-portfolio/static/css/2.5259f885.chunk.css.map",
     "static/css/main.ba0cebc2.chunk.css.map": "/my-portfolio/static/css/main.ba0cebc2.chunk.css.map",
-    "static/js/2.158a1994.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.158a1994.chunk.js.LICENSE.txt",
+    "static/js/2.189ff775.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.189ff775.chunk.js.LICENSE.txt",
     "static/media/CertificateOfCompletion_Become_a_React_Developer.pdf": "/my-portfolio/static/media/CertificateOfCompletion_Become_a_React_Developer.c365e477.pdf",
+    "static/media/CertificateOfCompletion_Building_Modern_Projects_with_React.pdf": "/my-portfolio/static/media/CertificateOfCompletion_Building_Modern_Projects_with_React.5874465b.pdf",
     "static/media/CertificateOfCompletion_React.js_Building_an_Interface.pdf": "/my-portfolio/static/media/CertificateOfCompletion_React.js_Building_an_Interface.7fa2690e.pdf",
     "static/media/CertificateOfCompletion_React.js_Essential_Training.pdf": "/my-portfolio/static/media/CertificateOfCompletion_React.js_Essential_Training.a4edd23f.pdf",
     "static/media/CertificateOfCompletion_React_Creating_and_Hosting_a_FullStack_Site.pdf": "/my-portfolio/static/media/CertificateOfCompletion_React_Creating_and_Hosting_a_FullStack_Site.7db84eca.pdf",
@@ -46,8 +47,8 @@
   "entrypoints": [
     "static/js/runtime-main.8b00eace.js",
     "static/css/2.5259f885.chunk.css",
-    "static/js/2.158a1994.chunk.js",
+    "static/js/2.189ff775.chunk.js",
     "static/css/main.ba0cebc2.chunk.css",
-    "static/js/main.8b8b0b74.chunk.js"
+    "static/js/main.05ef15fa.chunk.js"
   ]
 }
