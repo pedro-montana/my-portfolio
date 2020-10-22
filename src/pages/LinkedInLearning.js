@@ -13,6 +13,7 @@ import FullStack from "../docs/CertificateOfCompletion_React_Creating_and_Hostin
 import ReactDeveloper from "../docs/CertificateOfCompletion_Become_a_React_Developer.pdf";
 import Interface from "../docs/CertificateOfCompletion_React.js_Building_an_Interface.pdf";
 import Essential from "../docs/CertificateOfCompletion_React.js_Essential_Training.pdf";
+import Modern from "../docs/CertificateOfCompletion_Building_Modern_Projects_with_React.pdf";
 
 const useStateWithLocalStorage = (localStorageKey) => {
     const [value, setValue] = React.useState(
@@ -106,6 +107,12 @@ obtained = "Získané certifikáty";
               <div className={btnClass}>Download (PDF 184KB)</div>
             </a>
           </Col>
+          <Col className={colStyle}>
+            <h4>Building Modern Projects with React</h4>
+            <a href={Modern} rel="noopener noreferrer" target="_blank">
+              <div className={btnClass}>Download (PDF 206KB)</div>
+            </a>
+          </Col>
         </Row>
       </Container>
     </>
@@ -166,6 +173,14 @@ obtained = "Získané certifikáty";
             <h4>Become a React Developer</h4>
             <a href={ReactDeveloper} rel="noopener noreferrer" target="_blank">
               <div className={btnClass}>Download (PDF 184KB)</div>
+            </a>
+          </Col>
+        </Row>
+        <Row>
+        <Col className="mt-3">
+            <h4>Building Modern Projects with React</h4>
+            <a href={Modern} rel="noopener noreferrer" target="_blank">
+              <div className={btnClass}>Download (PDF 206KB)</div>
             </a>
           </Col>
         </Row>
