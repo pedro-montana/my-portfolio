@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.ba0cebc2.chunk.css",
-    "main.js": "/my-portfolio/static/js/main.05ef15fa.chunk.js",
-    "main.js.map": "/my-portfolio/static/js/main.05ef15fa.chunk.js.map",
+    "main.js": "/my-portfolio/static/js/main.7ebc7dcf.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.7ebc7dcf.chunk.js.map",
     "runtime-main.js": "/my-portfolio/static/js/runtime-main.8b00eace.js",
     "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.8b00eace.js.map",
     "static/css/2.5259f885.chunk.css": "/my-portfolio/static/css/2.5259f885.chunk.css",
-    "static/js/2.189ff775.chunk.js": "/my-portfolio/static/js/2.189ff775.chunk.js",
-    "static/js/2.189ff775.chunk.js.map": "/my-portfolio/static/js/2.189ff775.chunk.js.map",
+    "static/js/2.d4806981.chunk.js": "/my-portfolio/static/js/2.d4806981.chunk.js",
+    "static/js/2.d4806981.chunk.js.map": "/my-portfolio/static/js/2.d4806981.chunk.js.map",
     "index.html": "/my-portfolio/index.html",
-    "precache-manifest.0739f72f08ac6b7c0ca07c6a5f73cca2.js": "/my-portfolio/precache-manifest.0739f72f08ac6b7c0ca07c6a5f73cca2.js",
+    "precache-manifest.e95f51d373877ce989931f86ef9076c1.js": "/my-portfolio/precache-manifest.e95f51d373877ce989931f86ef9076c1.js",
     "service-worker.js": "/my-portfolio/service-worker.js",
     "static/css/2.5259f885.chunk.css.map": "/my-portfolio/static/css/2.5259f885.chunk.css.map",
     "static/css/main.ba0cebc2.chunk.css.map": "/my-portfolio/static/css/main.ba0cebc2.chunk.css.map",
-    "static/js/2.189ff775.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.189ff775.chunk.js.LICENSE.txt",
+    "static/js/2.d4806981.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.d4806981.chunk.js.LICENSE.txt",
+    "static/media/CertificateOfCompletion_AWS_and_React_Creating_FullStack_Apps.pdf": "/my-portfolio/static/media/CertificateOfCompletion_AWS_and_React_Creating_FullStack_Apps.12f5fdd2.pdf",
     "static/media/CertificateOfCompletion_Become_a_React_Developer.pdf": "/my-portfolio/static/media/CertificateOfCompletion_Become_a_React_Developer.c365e477.pdf",
     "static/media/CertificateOfCompletion_Building_Modern_Projects_with_React.pdf": "/my-portfolio/static/media/CertificateOfCompletion_Building_Modern_Projects_with_React.5874465b.pdf",
     "static/media/CertificateOfCompletion_React.js_Building_an_Interface.pdf": "/my-portfolio/static/media/CertificateOfCompletion_React.js_Building_an_Interface.7fa2690e.pdf",
@@ -47,8 +48,8 @@
   "entrypoints": [
     "static/js/runtime-main.8b00eace.js",
     "static/css/2.5259f885.chunk.css",
-    "static/js/2.189ff775.chunk.js",
+    "static/js/2.d4806981.chunk.js",
     "static/css/main.ba0cebc2.chunk.css",
-    "static/js/main.05ef15fa.chunk.js"
+    "static/js/main.7ebc7dcf.chunk.js"
   ]
 }
