@@ -69,7 +69,7 @@ function Showroom() {
     var bott = "In case of any questions feel free to ";
     var conMe = "Contact Me";
     var videosExample = "Video Page";
-    var videosBody = "Explore beautiful details of the world.";
+    var videosBody = "Explore beautiful details of the world from API.";
     var visitVideos = "Visit Videos";
     var certTitle = "Certificates";
     var certBody = "Steps of Learning React.";
@@ -85,7 +85,7 @@ function Showroom() {
     var bott = "V případě jakýchkoliv dotazů mě prosím ";
     var conMe = "kontaktujte";
     var videosExample = "Videa";
-    var videosBody = "Objevte nádherné detaily světa.";
+    var videosBody = "Objevte nádherné detaily světa z API.";
     var visitVideos = "K Videím";
     var certTitle = "Certifikáty";
     var certBody = "Progres ve studiu Reactu.";
@@ -99,7 +99,7 @@ function Showroom() {
 
   return (
     <>
-      <img className="d-block w-100" src={smallPic} alt="First slide" fluid />
+      <img className="d-block w-100" src={smallPic} alt="Projects" fluid />
       {expanded ? (
         <>
           <Button
