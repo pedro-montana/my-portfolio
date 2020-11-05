@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/my-portfolio/static/css/main.ba0cebc2.chunk.css",
-    "main.js": "/my-portfolio/static/js/main.873738f1.chunk.js",
-    "main.js.map": "/my-portfolio/static/js/main.873738f1.chunk.js.map",
+    "main.js": "/my-portfolio/static/js/main.30fde88b.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.30fde88b.chunk.js.map",
     "runtime-main.js": "/my-portfolio/static/js/runtime-main.8b00eace.js",
     "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.8b00eace.js.map",
     "static/css/2.5259f885.chunk.css": "/my-portfolio/static/css/2.5259f885.chunk.css",
-    "static/js/2.d4806981.chunk.js": "/my-portfolio/static/js/2.d4806981.chunk.js",
-    "static/js/2.d4806981.chunk.js.map": "/my-portfolio/static/js/2.d4806981.chunk.js.map",
+    "static/js/2.d685c66b.chunk.js": "/my-portfolio/static/js/2.d685c66b.chunk.js",
+    "static/js/2.d685c66b.chunk.js.map": "/my-portfolio/static/js/2.d685c66b.chunk.js.map",
     "index.html": "/my-portfolio/index.html",
-    "precache-manifest.36e3f67105d56047c467f1cadc9efa38.js": "/my-portfolio/precache-manifest.36e3f67105d56047c467f1cadc9efa38.js",
+    "precache-manifest.5c81c30c30bf9951a246ae4901c02c84.js": "/my-portfolio/precache-manifest.5c81c30c30bf9951a246ae4901c02c84.js",
     "service-worker.js": "/my-portfolio/service-worker.js",
     "static/css/2.5259f885.chunk.css.map": "/my-portfolio/static/css/2.5259f885.chunk.css.map",
     "static/css/main.ba0cebc2.chunk.css.map": "/my-portfolio/static/css/main.ba0cebc2.chunk.css.map",
-    "static/js/2.d4806981.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.d4806981.chunk.js.LICENSE.txt",
+    "static/js/2.d685c66b.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.d685c66b.chunk.js.LICENSE.txt",
     "static/media/CertificateOfCompletion_AWS_and_React_Creating_FullStack_Apps.pdf": "/my-portfolio/static/media/CertificateOfCompletion_AWS_and_React_Creating_FullStack_Apps.12f5fdd2.pdf",
     "static/media/CertificateOfCompletion_Become_a_React_Developer.pdf": "/my-portfolio/static/media/CertificateOfCompletion_Become_a_React_Developer.c365e477.pdf",
     "static/media/CertificateOfCompletion_Building_Modern_Projects_with_React.pdf": "/my-portfolio/static/media/CertificateOfCompletion_Building_Modern_Projects_with_React.5874465b.pdf",
@@ -42,14 +42,15 @@
     "static/media/pedro-phone_booth-3x1-2160x720-bb.jpg": "/my-portfolio/static/media/pedro-phone_booth-3x1-2160x720-bb.9f7de4f0.jpg",
     "static/media/pedro-projects-16x9-2160x720-projects-logo.jpg": "/my-portfolio/static/media/pedro-projects-16x9-2160x720-projects-logo.53df543f.jpg",
     "static/media/pedro-projects-3x1-2160x1215-projects-logo.jpg": "/my-portfolio/static/media/pedro-projects-3x1-2160x1215-projects-logo.4f52b856.jpg",
+    "static/media/pedro-richtext_example-16x9-767x431-rich-text-screenshot.jpg": "/my-portfolio/static/media/pedro-richtext_example-16x9-767x431-rich-text-screenshot.57f38226.jpg",
     "static/media/pedro-vysehrad-16x9-2160x1215-bb.jpg": "/my-portfolio/static/media/pedro-vysehrad-16x9-2160x1215-bb.a0adce23.jpg",
     "static/media/pedro-vysehrad-3x1-2160x720-bb.jpg": "/my-portfolio/static/media/pedro-vysehrad-3x1-2160x720-bb.aedcf061.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8b00eace.js",
     "static/css/2.5259f885.chunk.css",
-    "static/js/2.d4806981.chunk.js",
+    "static/js/2.d685c66b.chunk.js",
     "static/css/main.ba0cebc2.chunk.css",
-    "static/js/main.873738f1.chunk.js"
+    "static/js/main.30fde88b.chunk.js"
   ]
 }
