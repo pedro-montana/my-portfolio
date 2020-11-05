@@ -7,11 +7,12 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import ReactTooltip from "react-tooltip";
 import ToHeadingButton from "../components/ToHeadingButton";
-import {BiBadgeCheck} from "react-icons/bi";
+import { BiBadgeCheck } from "react-icons/bi";
 
 import projectPic from "../img/pedro-projects-3x1-2160x1215-projects-logo.jpg";
 import formPic from "../img/pedro-form_example-16x9-767x431-vet-appointments.jpg";
 import blogPic from "../img/pedro-my_blog-16x9-767x431-blog-screenshot.jpg";
+import richPic from "../img/pedro-richtext_example-16x9-767x431-rich-text-screenshot.jpg";
 import projectPicSmall from "../img/pedro-projects-16x9-2160x720-projects-logo.jpg";
 
 const useStateWithLocalStorage = (localStorageKey) => {
@@ -74,6 +75,9 @@ function Showroom() {
     var certTitle = "Certificates";
     var certBody = "Steps of Learning React.";
     var visitCert = "View Certificates";
+    var richExample = "Rich Text to add to Blog";
+    var richBody = "Basic Text editor component";
+    var visitRich = "Rich Text";
   } else {
     var heading = "Moje Práce";
     var vetAppointments = "Návstěva Veterináře";
@@ -90,6 +94,9 @@ function Showroom() {
     var certTitle = "Certifikáty";
     var certBody = "Progres ve studiu Reactu.";
     var visitCert = "Zobrazit certifikáty";
+    var richExample = "Rich Text";
+    var richBody = "Editor použitelný pro blog.";
+    var visitRich = "Můj Rich Text";
   }
   React.useEffect(() => {
     if (value === "gb") {
@@ -147,6 +154,30 @@ function Showroom() {
                 </Card.Body>
               </Card>
               <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
+                <Card.Img variant="top" src={formPic} />
+                <Card.Body>
+                  <Card.Title>{vetAppointments}</Card.Title>
+                  <Card.Text>{dog}</Card.Text>
+                  <Button variant="primary" onClick={onClick}>
+                    {setAppointment}
+                  </Button>
+                </Card.Body>
+              </Card>
+              <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
+                <Card.Img variant="top" src={richPic} />
+                <Card.Body>
+                  <Card.Title>{richExample}</Card.Title>
+                  <Card.Text>{richBody}</Card.Text>
+                  <a
+                    href="https://rich-text-blog.netlify.app/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <Button variant="primary">{visitRich}</Button>
+                  </a>
+                </Card.Body>
+              </Card>
+              <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
                 <Card.Img
                   variant="top"
                   src="http://orangevalleycaa.org/api/media/images/thumbs/BalletInSmoke_054599628.png"
@@ -160,7 +191,10 @@ function Showroom() {
                 </Card.Body>
               </Card>
               <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
-                <BiBadgeCheck className="mt-2 mx-auto text-success" size="140" />
+                <BiBadgeCheck
+                  className="mt-2 mx-auto text-success"
+                  size="140"
+                />
                 <Card.Body>
                   <Card.Title className="mt-4">{certTitle}</Card.Title>
                   <Card.Text>{certBody}</Card.Text>
