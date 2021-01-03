@@ -14,6 +14,7 @@ import formPic from "../img/pedro-form_example-16x9-767x431-vet-appointments.jpg
 import blogPic from "../img/pedro-my_blog-16x9-767x431-blog-screenshot.jpg";
 import richPic from "../img/pedro-richtext_example-16x9-767x431-rich-text-screenshot.jpg";
 import projectPicSmall from "../img/pedro-projects-16x9-2160x720-projects-logo.jpg";
+import todoPic from "../img/todo-icon-512.png";
 
 const useStateWithLocalStorage = (localStorageKey) => {
   const [value, setValue] = React.useState(
@@ -62,6 +63,9 @@ function Showroom() {
   if (value === "gb") {
     var heading = "My Work";
     var vetAppointments = "Vet Appointments";
+    var todoList = "Todo List";
+    var todoListBody = "Preproduction version of Todo List App";
+    var todoListButton = "Todo List";
     var dog = "A dog is a man's best friend.";
     var setAppointment = "Set an Appointment";
     var blogExample = "Blog Example";
@@ -81,6 +85,9 @@ function Showroom() {
   } else {
     var heading = "Moje Práce";
     var vetAppointments = "Návstěva Veterináře";
+    var todoList = "Úkolníček (Todo list)";
+    var todoListBody = "Předprodukční verze aplikace Úkolníček";
+    var todoListButton = "Úkolníček";
     var dog = "Pes je nejlepší přítel člověka.";
     var setAppointment = "Domluvit schůzku";
     var blogExample = "Ukázka blogu";
@@ -134,13 +141,19 @@ function Showroom() {
           <div className="container-fluid mb-5">
             <div className="row justify-content-md-center mt-5">
               <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={formPic} />
+                <Card.Img variant="top" src={todoPic} style={{height: "161px", width: "161px", marginInline: "auto"}} />
                 <Card.Body>
-                  <Card.Title>{vetAppointments}</Card.Title>
-                  <Card.Text>{dog}</Card.Text>
-                  <Button variant="primary" onClick={onClick}>
-                    {setAppointment}
+                  <Card.Title>{todoList}</Card.Title>
+                  <Card.Text>{todoListBody}</Card.Text>
+                  <a
+                    href="https://todo-list-ukolnicek.netlify.app/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <Button variant="primary">
+                    {todoListButton}
                   </Button>
+                  </a>
                 </Card.Body>
               </Card>
               <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>

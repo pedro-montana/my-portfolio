@@ -47,7 +47,7 @@ function AboutPage() {
     var certificates = "certificates";
     var persWork = "personal works";
     var body =
-      "For almost a year now I've been working as a web content editor. Among my responsibilities is to provide the best service of maintaining website for our main client, one of the biggest world's car manufacturers.";
+      "I've been working as a web content editor. Among my responsibilities is to provide the best service of maintaining website for our main client, one of the biggest world's car manufacturers.";
     var body2 =
       "I learn React in my free time. I like it for it is backed by a strong community and especially helpful with specific errors.";
   } else {
@@ -58,7 +58,7 @@ function AboutPage() {
     var certificates = "certifikáty";
     var persWork = "osobní práce";
     var body =
-      "Už téměr rok pracuji jako web content editor v\u00a0přední digitální agentuře v\u00a0České republice. Mezi mé povinnosti patří poskytnout kvalitní služby našemu klientovi, jedné z nějvětších světových automobilek.";
+      "Pracuji jako web content editor v\u00a0přední digitální agentuře v\u00a0České republice. Mezi mé povinnosti patří poskytnout kvalitní služby našemu klientovi, jedné z nějvětších světových automobilek.";
     var body2 =
       "React se učím se volném čase. Líbí se mi kvůli silné komunitě, která za ním stojí a díky jeho specifickým errorům, když se něco nepovede.";
   }
