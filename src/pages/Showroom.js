@@ -64,7 +64,7 @@ function Showroom() {
     var heading = "My Work";
     var vetAppointments = "Vet Appointments";
     var todoList = "Todo List";
-    var todoListBody = "Preproduction version of Todo List App";
+    var todoListBody = "Preproduction version of Todo List App in";
     var todoListButton = "Todo List";
     var dog = "A dog is a man's best friend.";
     var setAppointment = "Set an Appointment";
@@ -86,7 +86,7 @@ function Showroom() {
     var heading = "Moje Práce";
     var vetAppointments = "Návstěva Veterináře";
     var todoList = "Úkolníček (Todo list)";
-    var todoListBody = "Předprodukční verze aplikace Úkolníček";
+    var todoListBody = "Předprodukční verze aplikace Úkolníček v";
     var todoListButton = "Úkolníček";
     var dog = "Pes je nejlepší přítel člověka.";
     var setAppointment = "Domluvit schůzku";
@@ -152,6 +152,22 @@ function Showroom() {
                   >
                     <Button variant="primary">
                     {todoListButton}
+                  </Button>
+                  </a>
+                </Card.Body>
+              </Card>
+              <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
+                <Card.Img variant="top" src={todoPic} style={{height: "161px", width: "161px", marginInline: "auto"}} />
+                <Card.Body>
+                  <Card.Title>{todoList} Native</Card.Title>
+                  <Card.Text>{todoListBody} React Native (.apk)</Card.Text>
+                  <a
+                    href="https://expo.io/artifacts/d5ffa25a-f876-4acc-8087-ccd45fb0bed2"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <Button variant="primary">
+                    {todoListButton} React Native
                   </Button>
                   </a>
                 </Card.Body>
