@@ -8,6 +8,7 @@ import Container from "react-bootstrap/Container";
 import ReactTooltip from "react-tooltip";
 import ToHeadingButton from "../components/ToHeadingButton";
 import { BiBadgeCheck } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa";
 
 import projectPic from "../img/pedro-projects-3x1-2160x1215-projects-logo.jpg";
 import formPic from "../img/pedro-form_example-16x9-767x431-vet-appointments.jpg";
@@ -141,7 +142,27 @@ function Showroom() {
           <div className="container-fluid mb-5">
             <div className="row justify-content-md-center mt-5">
               <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={todoPic} style={{height: "161px", width: "161px", marginInline: "auto"}} />
+                <Card.Img
+                  variant="top"
+                  src={todoPic}
+                  style={{
+                    height: "161px",
+                    width: "161px",
+                    marginInline: "auto",
+                  }}
+                />
+                <a
+                  href="https://github.com/pedro-montana/todo-list-ukolnicek"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <FaGithub
+                    style={{ position: "absolute", top: "10px", right: "10px" }}
+                    class="text-dark"
+                    size={28}
+                    title="Project GitHub"
+                  />
+                </a>
                 <Card.Body>
                   <Card.Title>{todoList}</Card.Title>
                   <Card.Text>{todoListBody}</Card.Text>
@@ -150,14 +171,32 @@ function Showroom() {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <Button variant="primary">
-                    {todoListButton}
-                  </Button>
+                    <Button variant="primary">{todoListButton}</Button>
                   </a>
                 </Card.Body>
               </Card>
               <Card className="mx-auto card-bg mt-2" style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={todoPic} style={{height: "161px", width: "161px", marginInline: "auto"}} />
+                <Card.Img
+                  variant="top"
+                  src={todoPic}
+                  style={{
+                    height: "161px",
+                    width: "161px",
+                    marginInline: "auto",
+                  }}
+                />
+                <a
+                  href="https://github.com/pedro-montana/native-todo-ukolnicek"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <FaGithub
+                    style={{ position: "absolute", top: "10px", right: "10px" }}
+                    class="text-dark"
+                    size={28}
+                    title="Project GitHub"
+                  />
+                </a>
                 <Card.Body>
                   <Card.Title>{todoList} Native</Card.Title>
                   <Card.Text>{todoListBody} React Native (.apk)</Card.Text>
@@ -167,8 +206,8 @@ function Showroom() {
                     target="_blank"
                   >
                     <Button variant="primary">
-                    {todoListButton} React Native
-                  </Button>
+                      {todoListButton} React Native
+                    </Button>
                   </a>
                 </Card.Body>
               </Card>
